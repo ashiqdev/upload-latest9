@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Edit</title>
+
+    <!-- Dependency Styles -->
+    <link
+      rel="stylesheet"
+      href="./plugins/bootstrap/css/bootstrap.min.css"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./plugins/components-elegant-icons/css/elegant-icons.min.css"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./plugins/wow/css/animate.css"
+      type="text/css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Site Stylesheet -->
+    <link rel="stylesheet" href="./style-again.css" type="text/css" />
+  </head>
+
+  <body id="home-version-1" class="home-version-1" data-style="default">
+    <div id="main_content">
+      <!-- LOGO -->
+
+      <!--==========================-->
+      <!--=         Edit        =-->
+      <!--==========================-->
+
+      <header
+        style="z-index: 3335353"
+        class="site-header header-two header_trans-fixed"
+        data-top="92"
+      >
+        <div class="container">
+          <div class="header-inner">
+            <div class="site-mobile-logo">
+              <a href="index.html" class="logo">
+                <img
+                  src="./img/logo_small.png"
+                  alt="site logo"
+                  class="main-logo"
+                />
+
+                <img
+                  src="./img/logo.png"
+                  alt="site logo"
+                  class="sticky-logo"
+                  style="display: none"
+                />
+              </a>
+            </div>
+            <!-- end of site-mobile-logo -->
+            <div class="toggle-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <!-- end of toggle menu -->
+            <nav class="site-nav nav-two">
+              <div class="close-menu">
+                <span>Close</span>
+                <i class="ei ei-icon_close"></i>
+              </div>
+
+              <div class="site-logo">
+                <a href="index.html" class="logo">
+                  <img
+                    src="./img/logo_small.png"
+                    alt="site logo"
+                    class="main-logo"
+                  />
+                  <img
+                    src="./img/logo_small.png"
+                    alt="site logo"
+                    class="sticky-logo"
+                  />
+                </a>
+              </div>
+
+              <div class="menu-wrapper" data-top="992">
+                <ul class="site-main-menu blog-menu">
+                  <li><a style="color: #1ea6ff" href="#">Settings</a></li>
+                  <li><a style="color: #1ea6ff" href="#">History</a></li>
+                  <li>
+                    <a style="color: #1ea6ff" href="./blogs.html">Blogs</a>
+                  </li>
+
+                  <li><a style="color: #1ea6ff" href="#">Contact</a></li>
+                </ul>
+              </div>
+              <!-- end of menu-wrapper -->
+            </nav>
+            <!-- end of site-nav -->
+          </div>
+          <!-- end of header-inner -->
+        </div>
+        <!-- end of container -->
+      </header>
+
+      <section class="download edit-download" style="height: auto">
+        <div class="edit">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="download-from-wrapper edit-from-wrapper">
+                  <div
+                    style="padding-right: 0px; padding-top: 15rem"
+                    class="download-from-inner special-screen"
+                  >
+                    <h2 class="title">Edit File Details</h2>
+
+                    <div class="file-aligner">
+                      <div>
+                        <img
+                          src="./img/new-file-icon.svg"
+                          class="edit-file-icon"
+                          alt=""
+                        />
+                      </div>
+
+                      <div>
+                        <h3 class="edit-file-title">Resume.pdf</h3>
+                        <p class="edit-file-time">Uploaded: 1 minute ago</p>
+                      </div>
+                    </div>
+                    <form action="#" class="edit-form">
+                      <label for="file-url">Your File Url</label>
+                      <input
+                        type="text"
+                        value="https://nofile.io/resume.pdf"
+                        id="file-url"
+                        readonly
+                      />
+
+                      <label for="html-url">HTML Url</label>
+                      <input
+                        type="text"
+                        value="<a href='https://nofile.io/resume.pdf'>Resume.pdf</a>"
+                        id="html-url"
+                        readonly
+                      />
+
+                      <label for="forum-url">Forum Url</label>
+                      <input
+                        type="text"
+                        value="[url='https://nofile.io/resume.pdf']"
+                        id="forum-url"
+                        readonly
+                      />
+
+                      <button type="submit" class="btn-blue increase-btn">
+                        Update
+                      </button>
+
+                      <!-- setting -->
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding-bottom: 3rem;
+                          font-size: 3rem;
+                        "
+                      >
+                        <span class="material-icons" style="font-size: 3rem">
+                          settings
+                        </span>
+                        <span style="color: #2b2350">File Settings</span>
+                      </div>
+
+                      <input
+                        type="password"
+                        placeholder="set a password for this file"
+                      />
+
+                      <div class="user-interaction-container">
+                        <div class="checkbox">
+                          <input
+                            type="checkbox"
+                            style="width: auto !important"
+                          />
+                          <span class="checkbox-text"
+                            >Disable previews for this file</span
+                          >
+                        </div>
+
+                        <select
+                          class="custom-select custom-select"
+                          style="font-size: 1.4rem; border-radius: 20px"
+                        >
+                          <option selected>Keep this file for</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+
+                      <button type="submit" class="btn-blue increase-btn">
+                        Save Settings
+                      </button>
+
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding-bottom: 0rem;
+                          font-size: 3rem;
+                        "
+                      >
+                        <span style="font-size: 3rem" class="material-icons">
+                          delete_outline
+                        </span>
+                        <span style="color: #2b2350">Delete File</span>
+                      </div>
+                      <p style="font-size: 1.5rem">
+                        Press The button below if you wish to delete this file
+                      </p>
+
+                      <div>
+                        <button type="submit" class="btn-red increase-btn">
+                          Delete
+                        </button>
+                      </div>
+
+                      <!-- <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, vel quas! In iste, similique rem quaerat esse totam maiores culpa earum? Nemo aut aliquid qui accusamus labore? Aliquid eius enim nobis quod fuga reiciendis ab hic cum explicabo magnam quisquam impedit dolor iusto, sed quae minus veniam exercitationem illo laboriosam! Iusto et quisquam impedit hic ut dolorum, quas deleniti nemo placeat? Dolores ducimus, assumenda doloremque praesentium expedita velit necessitatibus facilis perferendis consequuntur magnam ipsum possimus natus aperiam inventore nesciunt consequatur soluta atque doloribus numquam itaque facere reprehenderit laboriosam. Perspiciatis voluptates repellat mollitia blanditiis error! Id quos aliquam atque accusantium voluptas.</div> -->
+                    </form>
+                  </div>
+                  <!-- /.download-from-inner -->
+
+                  <ul class="animate-ball">
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                  </ul>
+                </div>
+                <!-- /.download-from-wrapper -->
+              </div>
+
+              <!-- /.col-lg-7 -->
+            </div>
+            <!-- /.row -->
+          </div>
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.download -->
+
+      <!-- svg wave before footer -->
+      <div class="wave" style="z-index: 5000">
+        <svg id="svg" viewBox="0 0 1440 300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradient">
+              <stop offset="5%" stop-color="#edfcfd"></stop>
+              <stop offset="95%" stop-color="#e4ebec"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+            stroke="none"
+            stroke-width="0"
+            fill="url(#gradient)"
+            class="transition-all duration-300 ease-in-out delay-150"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
+      </div>
+      <!-- footer -->
+      <div class="footer-container-wrapper">
+        <div class="footer-container">
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title start">COMPANY</li>
+            <li class="footer-list-item">About us</li>
+            <li class="footer-list-item">Terms of use</li>
+            <li class="footer-list-item">Privacy Policy</li>
+            <li class="footer-list-item">Cookie policy</li>
+          </ul>
+
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title">RESOURCES</li>
+            <li class="footer-list-item">Blog</li>
+            <li class="footer-list-item">File Transfer Time Calculator</li>
+            <li class="footer-list-item">How To Send Large Videos</li>
+            <li class="footer-list-item">Image File Sharing Case Study</li>
+          </ul>
+
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title">
+              Uploadbiz ALTERNATIVES
+            </li>
+            <li class="footer-list-item">File Sharing Sites Compared</li>
+            <li class="footer-list-item">vs WeTransfer</li>
+            <li class="footer-list-item">vs TransferNow</li>
+            <li class="footer-list-item">vs TransferNow</li>
+            <li class="footer-list-item">vs Dropbox</li>
+          </ul>
+
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title">Contact</li>
+            <li class="footer-list-item">Email: info@dns.io</li>
+            <li class="footer-list-item">Twitter: @whatsmydns</li>
+            <li class="footer-list-item">Legal</li>
+            <li class="footer-list-item">Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div style="margin: 0 auto">
+          <div style="padding-bottom: 10px; text-align: center">
+            <img
+              class="footer-icon animated fadeIn"
+              style="
+                width: 50px;
+                animation: pulse-footer-icon 2s infinite;
+                border-radius: 15px;
+              "
+              src="/img/icon.png"
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dependency Scripts -->
+    <script src="./plugins/jquery/jquery.min.js"></script>
+    <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./plugins/jquery.appear/jquery.appear.js"></script>
+    <script src="./plugins/wow/js/wow.min.js"></script>
+
+    <!-- Site Scripts -->
+    <script src="./js/header.js"></script>
+    <script src="./js/myapp.js"></script>
+  </body>
+</html>

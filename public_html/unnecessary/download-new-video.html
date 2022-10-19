@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Download</title>
+
+    <meta name="msapplication-TileColor" content="#fa7070" />
+    <meta name="theme-color" content="#fa7070" />
+
+    <!-- Dependency Styles -->
+    <link
+      rel="stylesheet"
+      href="./plugins/bootstrap/css/bootstrap.min.css"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./plugins/wow/css/animate.css"
+      type="text/css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Site Stylesheet -->
+    <link rel="stylesheet" href="./style-again.css" type="text/css" />
+  </head>
+
+  <body id="home-version-1" class="home-version-1" data-style="default">
+    <div id="main_content">
+      <!-- LOGO -->
+
+      <!--==========================-->
+      <!--=         Download        =-->
+      <!--==========================-->
+
+      <div class="test-height">
+        <div
+          class="nav-item-logo"
+          style="
+            text-align: center;
+            position: absolute;
+            width: 70%;
+            z-index: 9999;
+            padding-top: 1rem;
+          "
+        >
+          <a href="./index-again.html">
+            <div class="top__logo">
+              <img
+                class="slightBlur"
+                style="width: 185px"
+                src="/img/logo_small.png"
+                alt="logo"
+              />
+            </div>
+          </a>
+        </div>
+
+        <nav class="navbar navbar-download">
+          <div class="nav-items">
+            <!-- 3rd -->
+            <div class="nav-item-tertiary">
+              <ul>
+                <li>
+                  <a href=""
+                    ><span style="vertical-align: middle" class="material-icons"
+                      >construction</span
+                    >
+                    Settings</a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><span style="vertical-align: middle" class="material-icons"
+                      >history</span
+                    >
+                    History</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <section class="download">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="download-from-wrapper">
+                  <div class="download-from-inner">
+                    <h2 class="title">
+                      MyFile.<span style="color: #1ea6ff">mp4</span>
+                    </h2>
+
+                    <div class="file-info-wrapper">
+                      <div class="stat">
+                        <span class="material-icons"> crop_free </span>
+                        <div>
+                          <h2>2.42MB</h2>
+                          <p>Size</p>
+                        </div>
+                      </div>
+
+                      <div class="stat">
+                        <span class="material-icons"> schedule </span>
+                        <div>
+                          <h2>2 Minutes Ago</h2>
+                          <p>Uploaded</p>
+                        </div>
+                      </div>
+
+                      <div class="stat">
+                        <span class="material-icons"> article </span>
+                        <div class="stat-info">
+                          <h2>mp4</h2>
+                          <p>File Type</p>
+                        </div>
+                      </div>
+
+                      <div class="stat">
+                        <span class="material-icons"> fullscreen </span>
+                        <div>
+                          <h2>1920 X 1080</h2>
+                          <p>Resolution</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      style="z-index: 100000; position: relative"
+                      class="btn-blue increase-btn"
+                    >
+                      Download
+                    </button>
+                  </div>
+                  <!-- /.download-from-inner -->
+
+                  <ul class="animate-ball">
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                    <li class="ball"></li>
+                    <!-- <li class="ball"></li> -->
+                  </ul>
+                </div>
+                <!-- /.download-from-wrapper -->
+              </div>
+              <!-- /.col-lg-7 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+
+          
+          <div class="download-banner">
+            <div
+              class="image-one-container"
+              style="transform: translateY(-100px)"
+            >
+              <div class="player-container wow pixFadeDown">
+                <div class="player">
+                  <video
+                    src="http://142.44.240.91/img/video.mp4"
+                    autoplay
+                    playsinline
+                    id="video"
+                  ></video>
+
+                  <div class="play-btn-big"></div>
+                  <div class="controls">
+                    <div class="time">
+                      <span class="time-current"></span
+                      ><span class="time-total"></span>
+                    </div>
+
+                    <div class="progress">
+                      <div class="progress-filled"></div>
+                    </div>
+
+                    <div class="controls-main">
+                      <div class="controls-left">
+                        <div class="play-btn paused"></div>
+
+                        <div class="volume">
+                          <div class="volume-btn loud">
+                            <svg
+                              width="26"
+                              height="24"
+                              viewBox="0 0 26 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.75497 17.6928H2C0.89543 17.6928 0 16.7973 0 15.6928V8.30611C0 7.20152 0.895431 6.30611 2 6.30611H6.75504L13.9555 0.237289C14.6058 -0.310807 15.6 0.151473 15.6 1.00191V22.997C15.6 23.8475 14.6058 24.3098 13.9555 23.7617L6.75497 17.6928Z"
+                                transform="translate(0 0.000518799)"
+                                fill="white"
+                              />
+                              <path
+                                id="volume-low"
+                                d="M0 9.87787C2.87188 9.87787 5.2 7.66663 5.2 4.93893C5.2 2.21124 2.87188 0 0 0V2C1.86563 2 3.2 3.41162 3.2 4.93893C3.2 6.46625 1.86563 7.87787 0 7.87787V9.87787Z"
+                                transform="translate(17.3333 7.44955)"
+                                fill="white"
+                              />
+
+                              <path
+                                id="volume-high"
+                                d="M0 16.4631C4.78647 16.4631 8.66667 12.7777 8.66667 8.23157C8.66667 3.68539 4.78647 0 0 0V2C3.78022 2 6.66667 4.88577 6.66667 8.23157C6.66667 11.5773 3.78022 14.4631 0 14.4631V16.4631Z"
+                                transform="translate(17.3333 4.15689)"
+                                fill="white"
+                              />
+                              <path
+                                id="volume-off"
+                                d="M1.22565 0L0 1.16412L3.06413 4.0744L0 6.98471L1.22565 8.14883L4.28978 5.23853L7.35391 8.14883L8.57956 6.98471L5.51544 4.0744L8.57956 1.16412L7.35391 0L4.28978 2.91031L1.22565 0Z"
+                                transform="translate(17.3769 8.31403)"
+                                fill="white"
+                              />
+                            </svg>
+                          </div>
+
+                          <div class="volume-slider">
+                            <div class="volume-filled"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="controls-right">
+                        <div class="speed">
+                          <ul class="speed-list">
+                            <li class="speed-item" data-speed="0.5">0.5x</li>
+                            <li class="speed-item" data-speed="0.75">0.75x</li>
+                            <li
+                              class="speed-item"
+                              data-speed="1"
+                              class="active"
+                            >
+                              1x
+                            </li>
+                            <li class="speed-item" data-speed="1.5">1.5x</li>
+                            <li class="speed-item" data-speed="2">2x</li>
+                          </ul>
+                        </div>
+
+                        <div class="fullscreen">
+                          <svg
+                            width="30"
+                            height="22"
+                            viewBox="0 0 30 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0V-1.5H-1.5V0H0ZM0 18H-1.5V19.5H0V18ZM26 18V19.5H27.5V18H26ZM26 0H27.5V-1.5H26V0ZM1.5 6.54545V0H-1.5V6.54545H1.5ZM0 1.5H10.1111V-1.5H0V1.5ZM-1.5 11.4545V18H1.5V11.4545H-1.5ZM0 19.5H10.1111V16.5H0V19.5ZM24.5 11.4545V18H27.5V11.4545H24.5ZM26 16.5H15.8889V19.5H26V16.5ZM27.5 6.54545V0H24.5V6.54545H27.5ZM26 -1.5H15.8889V1.5H26V-1.5Z"
+                              transform="translate(2 2)"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.download-banner -->
+        </section>
+        <!-- /.download -->
+      </div>
+
+      <!--===========================-->
+      <!--=         Feature         =-->
+      <!--===========================-->
+      <div class="feature-wrapper" style="position: relative; z-index: 999">
+        <div class="blue-rectangle" style="background-color: #3B82F6; position: relative;">
+
+          <section class="featured-eight">
+            <!-- <div class="top-bg">
+              <img src="./img/Feature/section_bg.svg" alt="demopik" />
+            </div> -->
+  
+            <ul class="particale-top">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+  
+            <div class="container">
+              <div class="section-title style-two title-light text-center">
+                <h3 class="sub-title wow pixFadeUp" style="color: #fff">
+                  Features
+                </h3>
+                <h2
+                  class="title wow pixFadeUp"
+                  style="color: #fff"
+                  data-wow-delay="0.2s"
+                >
+                  Fuel tax recovery process
+                </h2>
+  
+                <p
+                  class="wow pixFadeUp showoff"
+                  data-wow-delay="0.4s"
+                  style="
+                    font-size: 18px;
+                    padding-top: 2rem;
+                    padding-bottom: 4rem;
+                    line-height: 2;
+                    color: #fff;
+                  "
+                >
+                  Show off show off pick your nose and blow off smashing ruddy my
+                  good sir cack only a quid tinkety<br />
+                  tonk old fruit blower boot gosh, at public school squiffy.!
+                </p>
+              </div>
+              <!-- /.section-title -->
+  
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="demopik-icon-box-wrapper style-eight"
+                    style="text-align: center"
+                  >
+                    <div class="demopik-icon-box-icon" style="margin: 32px auto">
+                      <img src="img/Feature/52.png" alt="" />
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                      <h3
+                        class="pixsass-icon-box-title"
+                        style="font-size: 2.5rem"
+                      >
+                        <a href="#">Assess Opportunity</a>
+                      </h3>
+                      <p style="font-size: 1.4rem; line-height: 2">
+                        Cack old hotpot crikey easy peasy<br />
+                        cuppa my lady bum bag he lost his<br />
+                        bottle, knackered.!
+                      </p>
+  
+                      <a href="#" class="pix-btn btn-two btn-outline"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                  <!-- /.pixsass-box style-eight -->
+                </div>
+                <!-- /.col-lg-4 col-md-6 -->
+  
+                <div class="col-lg-4 col-md-6">
+                  <div class="demopik-icon-box-wrapper style-eight">
+                    <div class="demopik-icon-box-icon" style="margin: 32px auto">
+                      <img src="img/Feature/53.png" alt="" />
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                      <h3
+                        class="pixsass-icon-box-title"
+                        style="font-size: 2.5rem"
+                      >
+                        <a href="#">Customization</a>
+                      </h3>
+  
+                      <p style="font-size: 1.4rem; line-height: 2">
+                        Cack old hotpot crikey easy peasy<br />
+                        cuppa my lady bum bag he lost his<br />
+                        bottle, knackered.!
+                      </p>
+  
+                      <a href="#" class="pix-btn btn-two btn-outline"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                  <!-- /.pixsass-box style-eight -->
+                </div>
+                <!-- /.col-lg-4 col-md-6 -->
+  
+                <div class="col-lg-4 col-md-6">
+                  <div class="demopik-icon-box-wrapper style-eight">
+                    <div class="demopik-icon-box-icon" style="margin: 32px auto">
+                      <img src="img/Feature/54.png" alt="" />
+                    </div>
+                    <div class="pixsass-icon-box-content">
+                      <h3
+                        class="pixsass-icon-box-title"
+                        style="font-size: 2.5rem"
+                      >
+                        <a href="#">Multiple Managers</a>
+                      </h3>
+                      <p style="font-size: 1.4rem; line-height: 2">
+                        Cack old hotpot crikey easy peasy<br />
+                        cuppa my lady bum bag he lost his<br />
+                        bottle, knackered.!
+                      </p>
+  
+                      <a href="#" class="pix-btn btn-two btn-outline"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                  <!-- /.pixsass-box style-eight -->
+                </div>
+                <!-- /.col-lg-4 col-md-6 -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.container -->
+          </section>
+        </div>
+        <!-- /.featured -->
+      </div>
+
+      <!-- svg wave before footer -->
+      <div class="wave" style="z-index: 5000">
+        <svg id="svg" viewBox="0 0 1440 300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradient">
+              <stop offset="5%" stop-color="#edfcfd"></stop>
+              <stop offset="95%" stop-color="#e4ebec"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+            stroke="none"
+            stroke-width="0"
+            fill="url(#gradient)"
+            class="transition-all duration-300 ease-in-out delay-150"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
+      </div>
+      <!-- footer -->
+      <div class="footer-container-wrapper">
+        <div class="footer-container">
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title start">COMPANY</li>
+            <li class="footer-list-item">About us</li>
+            <li class="footer-list-item">Terms of use</li>
+            <li class="footer-list-item">Privacy Policy</li>
+            <li class="footer-list-item">Cookie policy</li>
+          </ul>
+
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title">RESOURCES</li>
+            <li class="footer-list-item">Blog</li>
+            <li class="footer-list-item">File Transfer Time Calculator</li>
+            <li class="footer-list-item">How To Send Large Videos</li>
+            <li class="footer-list-item">Image File Sharing Case Study</li>
+          </ul>
+
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title">
+              Uploadbiz ALTERNATIVES
+            </li>
+            <li class="footer-list-item">File Sharing Sites Compared</li>
+            <li class="footer-list-item">vs WeTransfer</li>
+            <li class="footer-list-item">vs TransferNow</li>
+            <li class="footer-list-item">vs TransferNow</li>
+            <li class="footer-list-item">vs Dropbox</li>
+          </ul>
+
+          <ul class="footer-item">
+            <li class="footer-list-item footer-title">Contact</li>
+            <li class="footer-list-item">Email: info@dns.io</li>
+            <li class="footer-list-item">Twitter: @whatsmydns</li>
+            <li class="footer-list-item">Legal</li>
+            <li class="footer-list-item">Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div style="margin: 0 auto">
+          <div style="padding-bottom: 10px; text-align: center">
+            <img
+              class="footer-icon animated fadeIn"
+              style="
+                width: 50px;
+                animation: pulse-footer-icon 2s infinite;
+                border-radius: 15px;
+              "
+              src="/img/icon.png"
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dependency Scripts -->
+    <script src="./plugins/jquery/jquery.min.js"></script>
+    <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./plugins/jquery.appear/jquery.appear.js"></script>
+    <script src="./plugins/wow/js/wow.min.js"></script>
+    <script src="./plugins/jquery.parallax-scroll/js/jquery.parallax-scroll.js"></script>
+
+    <!-- Site Scripts -->
+    <script src="./js/myapp.js"></script>
+  </body>
+</html>
