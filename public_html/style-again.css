@@ -16775,22 +16775,10 @@ body {
   100% {
     font-size:10vw;
   }
-}
 
-.fileIcon-wrapper {
-    position: absolute;
-    top: 10px;
-    /* left: 190px; */
-    transition: transform 1.50s;
-    top: 125px;
-    left: 122px;
-    background: red;
-    z-index: 65654664;
-}
-  .fileIcon-wrapper.open {
-    transition: transform 1s;
-    transform: translateX(-339px);
-  }
+
+
+
   .fileIcon {
     width: 60px;
     height: 60px;

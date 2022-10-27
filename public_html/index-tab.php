@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Simple Online Storage - Upload.biz</title>
 
     <link
@@ -115,7 +124,7 @@
   <body>
     <noscript>
       <div class="no-javascript">
-        Warning -
+        <span class="material-icons vertical-middle">warning</span> Warning -
         The site will not function with Javascript disabled
       </div>
     </noscript>
@@ -165,10 +174,11 @@
                 <div class="close-menu">
                   <span>Close</span>
                   <!-- <i class="ei ei-icon_close"></i> -->
-                  <svg class="mobile-only cross-icon file-fa-small-icon crossing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                    <stop offset="0%"  />
-                    <stop offset="100%"/>
-                  </linearGradient><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                  <img
+                    class="mobile-only cross-icon"
+                    src="./icons/022-cross.svg"
+                    alt=""
+                  />
                 </div>
 
                 <div class="site-logo">
@@ -189,12 +199,15 @@
                 <div class="menu-wrapper" data-top="992">
                   <ul class="site-main-menu">
                     <li>
-                    
-
-                      <svg class="mobile-only file-fa-small-icon micon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80z"/></svg>
+                      <!-- <i
+                        class="material-icons mobile-only"
+                        data-icon="settings"
+                      ></i> -->
+                      <img
+                        class="mobile-only"
+                        src="./icons/086-setting.svg"
+                        alt=""
+                      />
                       <a
                         data-toggle="modal"
                         data-target="#settingModal"
@@ -203,12 +216,15 @@
                       >
                     </li>
                     <li>
-                      
-
-                      <svg class="file-fa-small-icon micon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M64 144c26.5 0 48-21.5 48-48s-21.5-48-48-48S16 69.5 16 96s21.5 48 48 48zM192 64H160v64h32H480h32V64H480 192zm0 160H160v64h32H480h32V224H480 192zm0 160H160v64h32H480h32V384H480 192zM64 464c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm48-208c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48z"/></svg>
+                      <!-- <i
+                        class="material-icons mobile-only"
+                        data-icon="history"
+                      ></i> -->
+                      <img
+                        class="mobile-only"
+                        src="./icons/015-schedule.svg"
+                        alt=""
+                      />
                       <a
                         data-toggle="modal"
                         data-target="#historyModal"
@@ -217,11 +233,15 @@
                       >
                     </li>
                     <li>
-                     
-                      <svg class="file-fa-small-icon micon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M192 0V64c141.4 0 256 114.6 256 256h64C512 143.3 368.7 0 192 0zm0 96v64c88.4 0 160 71.6 160 160h64C416 196.3 315.7 96 192 96zM96 144V96H0v48V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"/></svg>
+                      <!-- <i
+                        class="material-icons mobile-only"
+                        data-icon="rss_feed"
+                      ></i> -->
+                      <img
+                        class="mobile-only"
+                        src="./icons/024-dashboard.svg"
+                        alt=""
+                      />
                       <a
                         data-toggle="modal"
                         data-target="#captchaModal"
@@ -230,11 +250,15 @@
                       >
                     </li>
                     <li>
-                     
-                      <svg class="file-fa-small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">	<linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zm128-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+                      <!-- <i
+                        class="material-icons mobile-only"
+                        data-icon="phone_in_talk"
+                      ></i> -->
+                      <img
+                        class="mobile-only"
+                        src="./icons/090-smartphone.svg"
+                        alt=""
+                      />
                       <a href="/contact">Contact</a>
                     </li>
                   </ul>
@@ -275,155 +299,133 @@
                 style="position: absolute; bottom: 0; left: 10%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up-left 11s ease-in-out infinite;
                     font-size: 22px;
                   "
-                  >
-
-                  <svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#fff" d="M128 64c-35.3 0-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64s-28.7-64-64-64zM352 256H128C57.3 256 0 198.7 0 128S57.3 0 128 0c48.2 0 90.2 26.6 112 66C261.8 26.6 303.8 0 352 0c70.7 0 128 57.3 128 128s-57.3 128-128 128zm0-192c-35.3 0-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64s-28.7-64-64-64zM558.3 259.4c10.8 5.4 17.7 16.5 17.7 28.6V480c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48L448 448V432 336 320l12.8-9.6 64-48c9.7-7.3 22.7-8.4 33.5-3zM64 288h64H352c35.3 0 64 28.7 64 64v96c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64V352H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64z"/></svg>
-                  </span
+                  >movie</span
                 >
               </div>
-              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 20%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up 5s ease-in-out infinite;
                     font-size: 37px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H298.5c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg></span
+                  >folder</span
                 >
               </div>
-              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 30%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up 9s ease-in-out infinite;
                     font-size: 51px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M152 120c-26.51 0-48 21.49-48 48s21.49 48 48 48s48-21.49 48-48S178.5 120 152 120zM447.1 32h-384C28.65 32-.0091 60.65-.0091 96v320c0 35.35 28.65 64 63.1 64h384c35.35 0 64-28.65 64-64V96C511.1 60.65 483.3 32 447.1 32zM463.1 409.3l-136.8-185.9C323.8 218.8 318.1 216 312 216c-6.113 0-11.82 2.768-15.21 7.379l-106.6 144.1l-37.09-46.1c-3.441-4.279-8.934-6.809-14.77-6.809c-5.842 0-11.33 2.529-14.78 6.809l-75.52 93.81c0-.0293 0 .0293 0 0L47.99 96c0-8.822 7.178-16 16-16h384c8.822 0 16 7.178 16 16V409.3z"/></svg></span
+                  >photo</span
                 >
               </div>
-              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 40%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up-left 9s ease-in-out infinite;
                     font-size: 42px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/></svg></span
+                  >inventory_2</span
                 >
               </div>
-              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 50%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up 7s ease-in-out infinite;
                     font-size: 30px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></span
+                  >markunread</span
                 >
               </div>
-              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 60%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up 4s ease-in-out infinite;
                     font-size: 41px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#fff" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg></span
+                  >insert_drive_file</span
                 >
               </div>
-              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 70%"
               >
                 <span
-                 
+                  class="material-icons"
                   style="
                     animation: icon-up-left 9s ease-in-out infinite;
                     font-size: 34px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#fff" d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg></span
+                  >wb_cloudy</span
                 >
               </div>
-              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 80%"
               >
                 <span
-              
+                  class="material-icons"
                   style="
                     animation: icon-up-left 6s ease-in-out infinite;
                     font-size: 52px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#fff" d="M224 0H0V512H384V160H224V0zm32 0V128H384L256 0zM64 224H88c30.9 0 56 25.1 56 56s-25.1 56-56 56H80v32 16H48V368 320 240 224H64zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H80v48h8zm72-80h16 24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H176 160V368 240 224zm32 128h8c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16h-8v96zm96-128h48 16v32H336 304v32h32 16v32H336 304v48 16H272V368 304 240 224h16z"/></svg></span
+                  >picture_as_pdf</span
                 >
               </div>
-              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 90%"
               >
                 <span
-                  
+                  class="material-icons"
                   style="
                     animation: icon-up 10s ease-in-out infinite;
                     font-size: 67px;
                   "
-                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#fff" d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM256 128c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg></span
+                  >photo_library</span
                 >
               </div>
             </div>
             <div class="upper-container">
               <!-- 1st -->
               <div class="image-card animated-icon">
-                <!-- <img src="./icons/041-folder.svg" alt="" /> -->
-                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                  <stop offset="0%"  />
-                  <stop offset="100%"/>
-                </linearGradient><path d="M512 384c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H394.5c-17 0-33.3-6.7-45.3-18.7L322.7 50.7c-12-12-28.3-18.7-45.3-18.7H160c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>
+                <img src="./icons/041-folder.svg" alt="" />
               </div>
               <!-- 2nd -->
               <!-- 3rd -->
               <div class="cloud-card animated-icon">
-                <!-- <img src="./icons/018-cloud-computing.svg" alt="" /> -->
-                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                  <stop offset="0%"  />
-                  <stop offset="100%"/>
-                </linearGradient><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"/></svg>
+                <img src="./icons/018-cloud-computing.svg" alt="" />
               </div>
             </div>
             <div class="lower-container">
               <div class="music-card animated-icon">
-                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                  <stop offset="0%"  />
-                  <stop offset="100%"/>
-                </linearGradient><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+                <img src="./icons/059-music note.svg" alt="" />
               </div>
               <div
                 style="position: relative; z-index: 2"
@@ -438,22 +440,14 @@
                     - Upload a file below to get started -
                   </p>
                   <span
-                    
+                    class="material-icons"
                     style="animation: float-no-shadow 2s ease-in-out infinite"
-                    >
-                    
-                    <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                    
-                    
-                    </span
+                    >keyboard_arrow_down</span
                   >
                 </div>
               </div>
               <div class="password-card animated-icon">
-                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
-                  <stop offset="0%"  />
-                  <stop offset="100%"/>
-                </linearGradient><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                <img src="./icons/secureupdate.svg" alt="" />
               </div>
             </div>
           </div>
@@ -469,7 +463,7 @@
           transform: translatey(336px);
           overflow: hidden;
           margin-bottom: 10rem;
-          z-index: 1;
+          z-index: 2;
           position: relative;
         "
       >
@@ -505,7 +499,7 @@
               data-tab-target="tab-1"
               
             >
-            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M224 0H0V512H384V160H224V0zm32 0V128H384L256 0zM216 408v24H168V408 305.9l-31 31-17 17L86.1 320l17-17 72-72 17-17 17 17 72 72 17 17L264 353.9l-17-17-31-31V408z"/></svg>
+              <img src="./icons/018-cloud-computing.svg" alt="" />
             </div>
 
             <!-- 2 -->
@@ -516,10 +510,7 @@
               
 
             >
-            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><linearGradient id="lgrad-nine" x1="100%" y1="100%" x2="0%" y2="0%" >
-              <stop offset="0%"  />
-              <stop offset="100%"/>
-            </linearGradient><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"/></svg>
+              <img src="./icons/064-microphone.svg" alt="" />
             </div>
 
             <!-- 3 -->
@@ -528,10 +519,7 @@
               data-tab-target="tab-3"
               
             >
-            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><linearGradient id="lgrad-nine" x1="100%" y1="100%" x2="0%" y2="0%" >
-              <stop offset="0%"  />
-              <stop offset="100%"/>
-            </linearGradient><path class="fa-primary" d="M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"/><path class="fa-secondary" d="M352 288C352 341 309 384 256 384C202.1 384 160 341 160 288C160 234.1 202.1 192 256 192C309 192 352 234.1 352 288z"/></svg>
+              <img src="./icons/009-camera.svg" alt="" />
             </div>
 
             <!-- 4 -->
@@ -540,10 +528,7 @@
               data-tab-target="tab-4"
               
             >
-            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><linearGradient id="lgrad-nine" x1="100%" y1="100%" x2="0%" y2="0%" >
-              <stop offset="0%"  />
-              <stop offset="100%"/>
-            </linearGradient><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+              <img src="./icons/010-camera-video.svg" alt="" />
             </div>
     </div>
             
@@ -752,9 +737,9 @@
               class="your-uploads"
               style="text-align: center; color: grey; padding: 30px"
             >
-            
-
-              <svg class="file-fa-small-icon plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+              <span class="material-icons" style="vertical-align: middle"
+                >queue</span
+              >
               Your uploads
             </h2>
 
@@ -782,7 +767,11 @@
                 <div class="right-side">
                   <div class="validation-link-container">
                     <p>
-                      <svg class="file-fa-small-icon-delete link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#606060" d="M0 256C0 167.6 71.6 96 160 96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-53 0-96 43-96 96s43 96 96 96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H160C71.6 416 0 344.4 0 256zm640 0c0 88.4-71.6 160-160 160H384c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c53 0 96-43 96-96s-43-96-96-96H384c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c88.4 0 160 71.6 160 160zM224 224H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+                      <span
+                        class="material-icons"
+                        style="vertical-align: middle"
+                        >link</span
+                      >
                       Your Link
                     </p>
                     <div
@@ -815,16 +804,22 @@
                         class="btn-blue copy-url"
                         data-copytarget="file-url"
                       >
-                      
-
-                        <svg class="file-fa-small-icon-delete copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M232 344V280H168C154.7 280 144 269.3 144 256C144 242.7 154.7 232 168 232H232V168C232 154.7 242.7 144 256 144C269.3 144 280 154.7 280 168V232H344C357.3 232 368 242.7 368 256C368 269.3 357.3 280 344 280H280V344C280 357.3 269.3 368 256 368C242.7 368 232 357.3 232 344zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <span
+                          class="material-icons"
+                          style="margin-top: -5px; vertical-align: middle"
+                          >add_circle_outline</span
+                        >
                         Copy URL
                       </button>
                     </div>
                   </div>
                   <div class="validation-link-container">
                     <p>
-                      <svg class="file-fa-small-icon-delete link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#606060" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+                      <span
+                        class="material-icons"
+                        style="vertical-align: middle"
+                        >edit</span
+                      >
                       Your Edit Link
                     </p>
                     <div
@@ -856,7 +851,11 @@
                         class="btn-blue copy-url"
                         data-copytarget="edit-url"
                       >
-                      <svg class="file-fa-small-icon-delete copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M232 344V280H168C154.7 280 144 269.3 144 256C144 242.7 154.7 232 168 232H232V168C232 154.7 242.7 144 256 144C269.3 144 280 154.7 280 168V232H344C357.3 232 368 242.7 368 256C368 269.3 357.3 280 344 280H280V344C280 357.3 269.3 368 256 368C242.7 368 232 357.3 232 344zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <span
+                          class="material-icons"
+                          style="margin-top: -5px; vertical-align: middle"
+                          >add_circle_outline</span
+                        >
                         Copy Edit URL
                       </button>
                     </div>
@@ -874,8 +873,11 @@
                       class="pause-btn"
                       style="border: 0; background: none"
                     >
-                     
-                      <svg class="pause-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path fill="#fff" class="fa-primary" d="M191.1 160C174.3 160 160 174.3 160 191.1v128C160 337.7 174.3 352 192 352S224 337.7 224 320V191.1C224 174.3 209.7 160 191.1 160zM319.1 160C302.3 160 288 174.3 288 191.1v128C288 337.7 302.3 352 320 352S352 337.7 352 320V191.1C352 174.3 337.7 160 319.1 160z"/><path fill="#606060" class="fa-secondary" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM224 191.1v128C224 337.7 209.7 352 192 352S160 337.7 160 320V191.1C160 174.3 174.3 160 191.1 160S224 174.3 224 191.1zM352 191.1v128C352 337.7 337.7 352 320 352S288 337.7 288 320V191.1C288 174.3 302.3 160 319.1 160S352 174.3 352 191.1z"/></svg>
+                      <span
+                        class="material-icons pause"
+                        style="font-size: 54px; color: #d1d5db"
+                        >pause_circle_filled</span
+                      >
                     </button>
                   </div>
 
@@ -953,7 +955,11 @@
                       class="delete-file"
                       style="border: 0; background: none"
                     >
-                    <svg class="cross-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path fill="#fff""" class="fa-primary" d="M255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1z"/><path fill="#606060" class="fa-secondary" d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM175 208.1L222.1 255.1L175 303C165.7 312.4 165.7 327.6 175 336.1C184.4 346.3 199.6 346.3 208.1 336.1L255.1 289.9L303 336.1C312.4 346.3 327.6 346.3 336.1 336.1C346.3 327.6 346.3 312.4 336.1 303L289.9 255.1L336.1 208.1C346.3 199.6 346.3 184.4 336.1 175C327.6 165.7 312.4 165.7 303 175L255.1 222.1L208.1 175C199.6 165.7 184.4 165.7 175 175C165.7 184.4 165.7 199.6 175 208.1V208.1z"/></svg>
+                      <span
+                        class="material-icons cross"
+                        style="font-size: 54px; color: #d1d5db"
+                        >cancel</span
+                      >
                     </button>
                   </div>
                 </div>
@@ -974,7 +980,7 @@
                       margin-right: 14px;
                     "
                   >
-                    <!-- <span
+                    <span
                       class="material-icons file-icon"
                       id="myFileIcon"
                       style="
@@ -985,13 +991,7 @@
                         margin-left: -5px;
                       "
                       >description</span
-                    > -->
-
-                    <svg class="file-fa-preview-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M152 120c-26.51 0-48 21.49-48 48s21.49 48 48 48s48-21.49 48-48S178.5 120 152 120zM447.1 32h-384C28.65 32-.0091 60.65-.0091 96v320c0 35.35 28.65 64 63.1 64h384c35.35 0 64-28.65 64-64V96C511.1 60.65 483.3 32 447.1 32zM463.1 409.3l-136.8-185.9C323.8 218.8 318.1 216 312 216c-6.113 0-11.82 2.768-15.21 7.379l-106.6 144.1l-37.09-46.1c-3.441-4.279-8.934-6.809-14.77-6.809c-5.842 0-11.33 2.529-14.78 6.809l-75.52 93.81c0-.0293 0 .0293 0 0L47.99 96c0-8.822 7.178-16 16-16h384c8.822 0 16 7.178 16 16V409.3z"/></svg>
-
-
-                    
-
+                    >
                   </div>
                   <div>
                     <h3>
@@ -1033,13 +1033,20 @@
                     style="margin-bottom: 20px; width: 100%"
                     class="settings-btn btn-blue"
                   >
-                   
-                    <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M352 320c88.4 0 160-71.6 160-160c0-15.3-2.2-30.1-6.2-44.2c-3.1-10.8-16.4-13.2-24.3-5.3l-76.8 76.8c-3 3-7.1 4.7-11.3 4.7H336c-8.8 0-16-7.2-16-16V118.6c0-4.2 1.7-8.3 4.7-11.3l76.8-76.8c7.9-7.9 5.4-21.2-5.3-24.3C382.1 2.2 367.3 0 352 0C263.6 0 192 71.6 192 160c0 19.1 3.4 37.5 9.5 54.5L19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L297.5 310.5c17 6.2 35.4 9.5 54.5 9.5zM80 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg>
+                    <span
+                      style="vertical-align: middle; margin-top: -2px"
+                      class="material-icons"
+                      >build_circle</span
+                    >
                     Change file settings
                   </button>
 
                   <button class="upload-btn btn-green">
-                    <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24z"/></svg>
+                    <span
+                      style="vertical-align: middle; margin-top: -2px"
+                      class="material-icons"
+                      >upload</span
+                    >
                     Upload This file
                   </button>
                 </div>
@@ -1189,45 +1196,9 @@
                 class="list-items color-two animatable pixFadeUp"
                 data-wow-delay="0.4s"
               >
-                <li>
-
-                  <span>
-                    <svg class="file-fa-icon shield-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                  </span>
-                  
-                  <span>
-                    Quick Access
-                  </span>
-                 
-                </li>
-                
-                
-                
-                <li>
-
-                  <span>
-                    <svg class="file-fa-icon shield-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                  </span>
-                  
-                  <span>
-                    Easily Manage
-                  </span>
-                 
-                </li>
-                
-                
-                
-                <li>
-
-                  <span>
-                    <svg class="file-fa-icon shield-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                  </span>
-                  
-                  <span>
-                    7/24 Support
-                  </span>
-                 
-                </li>
+                <li>Quick Access</li>
+                <li>Easily Manage</li>
+                <li>7/24h Support</li>
               </ul>
 
               <a
@@ -2180,7 +2151,7 @@
         <div class="countup-wrapper">
           <div class="row">
             <!-- 1 -->
-            <div class="col-lg-3 col-md-6">
+            <div class="col-md-3 col-sm-6">
               <div class="counter">
                 <div class="counter-icon">
                   <img src="./icons/031-download.svg" alt="" />
@@ -2193,7 +2164,7 @@
             </div>
 
             <!-- 2 -->
-            <div class="col-lg-3 col-md-6">
+            <div class="col-md-3 col-sm-6">
               <div class="counter blue">
                 <div class="counter-icon">
                   <img src="./icons/096-upload.svg" alt="" />
@@ -2206,7 +2177,7 @@
             </div>
 
             <!-- 3 -->
-            <div class="col-lg-3 col-md-6 mtop-fix">
+            <div class="col-md-3 col-sm-6">
               <div class="counter">
                 <div class="counter-icon">
                   <img src="./icons/097-user.svg" alt="" />
@@ -2219,7 +2190,7 @@
             </div>
 
             <!-- 4 -->
-            <div class="col-lg-3 col-md-6 mtop-fix">
+            <div class="col-md-3 col-sm-6">
               <div class="counter blue">
                 <div class="counter-icon">
                   <img src="./icons/server-counter.svg" alt="" />
@@ -2288,7 +2259,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+              <i class="material-icons" data-icon="close"></i>
             </button>
           </div>
           <div class="modal-body">
@@ -2321,15 +2292,8 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          >
-                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">">
-                            <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                            <stop offset="0%"  />
-                            <stop offset="100%"/>
-                          </linearGradient>
-                          <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
-                      
-                      </a>
+                          ><img src="../img/file-icon.svg" alt="history"
+                        /></a>
                       </div>
                       <div class="info">
                         <h4 class="history-title">
@@ -2347,10 +2311,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+                      <i
+                        class="material-icons history-edit-icon"
+                        data-icon="edit_note"
+                      ></i>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2359,14 +2323,8 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          >
-                          
-                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                            <stop offset="0%"  />
-                            <stop offset="100%"/>
-                          </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
-                          
-                          </a
+                          ><img src="../img/file-icon.svg"" alt="saspik history"
+                          /></a
                         >
                       </div>
                       <div class="info">
@@ -2385,10 +2343,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+                      <i
+                        class="material-icons history-edit-icon"
+                        data-icon="edit_note"
+                      ></i>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2397,13 +2355,8 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          >
-                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                            <stop offset="0%"  />
-                            <stop offset="100%"/>
-                          </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
-                          
-                          </a
+                          ><img src="../img/file-icon.svg"" alt="saspik history"
+                          /></a
                         >
                       </div>
                       <div class="info">
@@ -2420,10 +2373,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+                      <i
+                        class="material-icons history-edit-icon"
+                        data-icon="edit_note"
+                      ></i>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2432,12 +2385,8 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          >
-                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                            <stop offset="0%"  />
-                            <stop offset="100%"/>
-                          </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
-                          </a
+                          ><img src="../img/file-icon.svg"" alt="saspik history"
+                          /></a
                         >
                       </div>
                       <div class="info">
@@ -2454,10 +2403,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                        <stop offset="0%"  />
-                        <stop offset="100%"/>
-                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+                      <i
+                        class="material-icons history-edit-icon"
+                        data-icon="edit_note"
+                      ></i>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2511,7 +2460,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+              <i class="material-icons" data-icon="close"></i>
             </button>
           </div>
           <div class="modal-body">
@@ -2549,6 +2498,88 @@
 
     <!-- file setting modal-->
 
+    <div
+      class="modal fade"
+      id="fileSettingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="fileSettingModalLabel"
+      aria-hidden="true"
+      style="z-index: 100"
+    >
+      <div
+        class="modal-dialog fileSettingModalDiaglog inbox-modal modal-dialog-centered"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title custom-title" id="inboxModalLabel">
+              File Settings
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <!-- <span aria-hidden="true">&times;</span> -->
+              <i class="material-icons" data-icon="close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="historys">
+                <div class="history__list file-setting-list">
+                  <div class="history-info">
+                    <div class="company-logo">
+                      <a href="#"
+                        ><img src="../img/file-icon.svg" alt="saspik history"
+                      /></a>
+                    </div>
+                    <div class="info">
+                      <h4 class="history-title">
+                        <a href="#">ava.png</a>
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="history-time file-size">
+                    <span>4mb</span>
+                  </div>
+
+                  <div class="history-location file-date">
+                    <span>11/8/2022</span>
+                  </div>
+                </div>
+                <!-- /.history__list -->
+                <div>
+                  <button
+                    data-toggle="modal"
+                    data-target="#passwordModal"
+                    class="btn-password-grad"
+                  >
+                    <i class="material-icons" data-icon="lock"></i>
+                    <span>Password Protect</span>
+                  </button>
+                  <button class="btn-delete-grad">
+                    <i class="material-icons" data-icon="delete_outline"></i>
+                    <span>Delete</span>
+                  </button>
+
+                  <button
+                    class="btn-expiry-grad"
+                    data-toggle="modal"
+                    data-target="#dateTimeModal"
+                  >
+                    <i class="material-icons" data-icon="delete_outline"></i>
+                    <span>Set Expiration Date</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- end of file setting modal -->
 
@@ -2576,7 +2607,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+              <i class="material-icons" data-icon="close"></i>
             </button>
           </div>
           <div class="modal-body">
@@ -2623,7 +2654,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+              <i class="material-icons" data-icon="close"></i>
             </button>
           </div>
           <div class="modal-body settingModal">
@@ -2667,11 +2698,7 @@
                       aria-controls="passwordSetting"
                       aria-selected="false"
                     >
-                    
-                      <span>
-                        <svg class="file-fa-check-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337l-17 17-17-17-64 -64-17-17L160 222.1l17 17 47 47L335 175l17-17L385.9 192l-17 17z"/></svg>
-
-                      </span>
+                      <span class="material-icons">check_circle</span>
                       <span>Password</span>
                     </a>
                   </li>
@@ -2701,9 +2728,7 @@
                       aria-controls="expireSetting"
                       aria-selected="false"
                     >
-                      <span>
-                        <svg class="file-fa-check-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337l-17 17-17-17-64 -64-17-17L160 222.1l17 17 47 47L335 175l17-17L385.9 192l-17 17z"/></svg>
-                      </span>
+                      <span class="material-icons">check_circle</span>
                       <span>Expiry Date</span>
                     </a>
                   </li>
@@ -2785,14 +2810,10 @@
                           <div class="history-info">
                             <div class="company-logo">
                               <a href="#"
-                                >
-                                
-                                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
-                                  <stop offset="0%"  />
-                                  <stop offset="100%"/>
-                                </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
-                            
-                            </a>
+                                ><img
+                                  src="../img/file-icon.svg"
+                                  alt="saspik history"
+                              /></a>
                             </div>
                             <div class="info">
                               <h4 class="history-title">
@@ -2802,7 +2823,7 @@
                           </div>
 
                           <div class="history-time file-size">
-                            <span>8mb</span>
+                            <span>4mb</span>
                           </div>
 
                           <div class="history-location file-date">
@@ -2879,7 +2900,10 @@
 
                       <div>
                         <button class="btn-delete-grad">
-                          <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
+                          <i
+                            class="material-icons"
+                            data-icon="delete_outline"
+                          ></i>
                           <span>Delete</span>
                         </button>
                       </div>
@@ -2990,7 +3014,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+              <i class="material-icons" data-icon="close"></i>
             </button>
           </div>
           <div class="modal-body">
@@ -3001,7 +3025,10 @@
                   <span class="captcha"></span>
                 </div>
                 <button class="reload-btn">
-                  <svg class="file-fa-medium-refresh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M142.9 142.9c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5c0 0 0 0 0 0H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5c7.7-21.8 20.2-42.3 37.8-59.8zM16 312v7.6 .7V440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8H48.4h-.7H40c-13.3 0-24 10.7-24 24z"/></svg>
+                  <i
+                    class="material-icons refresh-icon"
+                    data-icon="refresh"
+                  ></i>
                 </button>
               </div>
               <form action="#" class="input-area">
@@ -3260,7 +3287,7 @@
           if (!isDuplicate(files[i])) {
             myNotify.addNotification({
               // message: `${files[i].name} has been added to your upload queue`,
-              message: `<div><svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> <p>${files[i].name} has been added to your upload queue</p></div>`,
+              message: `<div> <i class="material-icons" data-icon="add_circle_outline"></i><p>${files.name} has been added to your upload queue</p></div>`,
               animate: true, //boolean: animate the fade in and fade out
               autoRemove: true, //boolean: remove this notification after 6 seconds (adds progress bar animation)
               backgroundColor: '#27abdb', //string: background color of the notification
@@ -3444,7 +3471,7 @@
           if (!isDuplicate(this.files[i])) {
             myNotify.addNotification({
               // message: `${this.files[i].name} has been added to your upload queue`,
-              message: `<div><svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> <p>${this.files[i].name} has been added to your upload queue</p></div>`,
+              message: `<div> <i class="material-icons" data-icon="add_circle_outline"></i><p>${this.files[i].name} has been added to your upload queue</p></div>`,
               animate: true, //boolean: animate the fade in and fade out
               autoRemove: true, //boolean: remove this notification after 6 seconds (adds progress bar animation)
               backgroundColor: '#27abdb', //string: background color of the notification
