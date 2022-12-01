@@ -4,16 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet"
-    />
+    
     <title>Simple Online Storage - Upload.biz</title>
 
     <link
@@ -51,6 +42,8 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
+    <script src="./plugins/notification-manager/notification-manager.js"></script>
+
     <link
       rel="stylesheet"
       href="plugins/bootstrap/css/bootstrap.min.css?v=<?php echo time(); ?>"
@@ -59,51 +52,45 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+      href="plugins/notification-manager/notification-manager.css?v=<?php echo time(); ?>"
+      type="text/css"
     />
 
-    <!-- <link
+    <!-- <link rel="stylesheet" href="./slick-theme.css" /> -->
+
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-      integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.35/sweetalert2.min.css"
+      integrity="sha512-doewDSLNwoD1ZCdA1D1LXbbdNlI4uZv7vICMrzxfshHmzzyFNhajLEgH/uigrbOi8ETIftUGBkyLnbyDOU5rpA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
     />
 
     <!-- <link
       rel="stylesheet"
-      href="./plugins/wow/css/animate.css"
-      type="text/css"
+      href="./style-again.css?v=1322343233233332332.33322222352223.2422432343221.222523323223213"
     /> -->
 
-    <link
-      rel="stylesheet"
-      href="./plugins/components-elegant-icons/css/elegant-icons.min.css"
-      type="text/css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://kenwheeler.github.io/slick/slick/slick-theme.css"
-    />
-
-    <link
+    <!-- Slick.css -->
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <!--[if (lt IE 9)
-      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script
-    ><![endif]-->
+    /> -->
 
-    <link rel="stylesheet" href="./style2.css?v=<?php echo time(); ?>" />
+    <!-- <link rel="stylesheet" href="./css/slick.css" /> -->
+    <!-- Slick.css end -->
 
-    <!-- <link rel="stylesheet" href="sweetalert2.min.css" /> -->
+    <link rel="stylesheet" href="./style-second.css?v=<?php echo time(); ?>" />
+
+    <link rel="stylesheet" href="./style-tab.css?v=<?php echo time(); ?>" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.35/sweetalert2.min.js"
+      integrity="sha512-MmPnuWhEes/JL9MZGGn+lYFQc8M0bwX/VTLXX+Y9GcSPKGjeo9mEiFrcBqyVJ0AJAyuoW71UwTQvgeSU7TK5sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- scripts -->
 
@@ -117,24 +104,23 @@
     <!-- <script src="./plugins/wow/js/wow.min.js"></script> -->
     <script src="./plugins/countUp.js/countUp.min.js"></script>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tipso/1.0.8/tipso.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tipso/1.0.8/tipso.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
   </head>
   <body>
     <noscript>
       <div class="no-javascript">
-        <span class="material-icons vertical-middle">warning</span> Warning -
+        Warning -
         The site will not function with Javascript disabled
       </div>
     </noscript>
+
+    <div id="notificationsContainer"></div>
 
     <div class="drag-container">
       <div
@@ -179,11 +165,10 @@
                 <div class="close-menu">
                   <span>Close</span>
                   <!-- <i class="ei ei-icon_close"></i> -->
-                  <img
-                    class="mobile-only cross-icon"
-                    src="./icons/022-cross.svg"
-                    alt=""
-                  />
+                  <svg class="mobile-only cross-icon file-fa-small-icon crossing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                    <stop offset="0%"  />
+                    <stop offset="100%"/>
+                  </linearGradient><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
                 </div>
 
                 <div class="site-logo">
@@ -204,15 +189,12 @@
                 <div class="menu-wrapper" data-top="992">
                   <ul class="site-main-menu">
                     <li>
-                      <!-- <i
-                        class="material-icons mobile-only"
-                        data-icon="settings"
-                      ></i> -->
-                      <img
-                        class="mobile-only"
-                        src="./icons/086-setting.svg"
-                        alt=""
-                      />
+                    
+
+                      <svg class="mobile-only file-fa-small-icon micon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80z"/></svg>
                       <a
                         data-toggle="modal"
                         data-target="#settingModal"
@@ -221,15 +203,12 @@
                       >
                     </li>
                     <li>
-                      <!-- <i
-                        class="material-icons mobile-only"
-                        data-icon="history"
-                      ></i> -->
-                      <img
-                        class="mobile-only"
-                        src="./icons/015-schedule.svg"
-                        alt=""
-                      />
+                      
+
+                      <svg class="file-fa-small-icon micon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M64 144c26.5 0 48-21.5 48-48s-21.5-48-48-48S16 69.5 16 96s21.5 48 48 48zM192 64H160v64h32H480h32V64H480 192zm0 160H160v64h32H480h32V224H480 192zm0 160H160v64h32H480h32V384H480 192zM64 464c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm48-208c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48z"/></svg>
                       <a
                         data-toggle="modal"
                         data-target="#historyModal"
@@ -238,15 +217,11 @@
                       >
                     </li>
                     <li>
-                      <!-- <i
-                        class="material-icons mobile-only"
-                        data-icon="rss_feed"
-                      ></i> -->
-                      <img
-                        class="mobile-only"
-                        src="./icons/024-dashboard.svg"
-                        alt=""
-                      />
+                     
+                      <svg class="file-fa-small-icon micon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M192 0V64c141.4 0 256 114.6 256 256h64C512 143.3 368.7 0 192 0zm0 96v64c88.4 0 160 71.6 160 160h64C416 196.3 315.7 96 192 96zM96 144V96H0v48V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"/></svg>
                       <a
                         data-toggle="modal"
                         data-target="#captchaModal"
@@ -255,15 +230,11 @@
                       >
                     </li>
                     <li>
-                      <!-- <i
-                        class="material-icons mobile-only"
-                        data-icon="phone_in_talk"
-                      ></i> -->
-                      <img
-                        class="mobile-only"
-                        src="./icons/090-smartphone.svg"
-                        alt=""
-                      />
+                     
+                      <svg class="file-fa-small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">	<linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zm128-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
                       <a href="/contact">Contact</a>
                     </li>
                   </ul>
@@ -304,133 +275,155 @@
                 style="position: absolute; bottom: 0; left: 10%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up-left 11s ease-in-out infinite;
                     font-size: 22px;
                   "
-                  >movie</span
+                  >
+
+                  <svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#fff" d="M128 64c-35.3 0-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64s-28.7-64-64-64zM352 256H128C57.3 256 0 198.7 0 128S57.3 0 128 0c48.2 0 90.2 26.6 112 66C261.8 26.6 303.8 0 352 0c70.7 0 128 57.3 128 128s-57.3 128-128 128zm0-192c-35.3 0-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64s-28.7-64-64-64zM558.3 259.4c10.8 5.4 17.7 16.5 17.7 28.6V480c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48L448 448V432 336 320l12.8-9.6 64-48c9.7-7.3 22.7-8.4 33.5-3zM64 288h64H352c35.3 0 64 28.7 64 64v96c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64V352H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64z"/></svg>
+                  </span
                 >
               </div>
+              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 20%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up 5s ease-in-out infinite;
                     font-size: 37px;
                   "
-                  >folder</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H298.5c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 30%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up 9s ease-in-out infinite;
                     font-size: 51px;
                   "
-                  >photo</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M152 120c-26.51 0-48 21.49-48 48s21.49 48 48 48s48-21.49 48-48S178.5 120 152 120zM447.1 32h-384C28.65 32-.0091 60.65-.0091 96v320c0 35.35 28.65 64 63.1 64h384c35.35 0 64-28.65 64-64V96C511.1 60.65 483.3 32 447.1 32zM463.1 409.3l-136.8-185.9C323.8 218.8 318.1 216 312 216c-6.113 0-11.82 2.768-15.21 7.379l-106.6 144.1l-37.09-46.1c-3.441-4.279-8.934-6.809-14.77-6.809c-5.842 0-11.33 2.529-14.78 6.809l-75.52 93.81c0-.0293 0 .0293 0 0L47.99 96c0-8.822 7.178-16 16-16h384c8.822 0 16 7.178 16 16V409.3z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 40%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up-left 9s ease-in-out infinite;
                     font-size: 42px;
                   "
-                  >inventory_2</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 50%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up 7s ease-in-out infinite;
                     font-size: 30px;
                   "
-                  >markunread</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 60%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up 4s ease-in-out infinite;
                     font-size: 41px;
                   "
-                  >insert_drive_file</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#fff" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 70%"
               >
                 <span
-                  class="material-icons"
+                 
                   style="
                     animation: icon-up-left 9s ease-in-out infinite;
                     font-size: 34px;
                   "
-                  >wb_cloudy</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#fff" d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon hide-small-screen"
                 style="position: absolute; bottom: 0; left: 80%"
               >
                 <span
-                  class="material-icons"
+              
                   style="
                     animation: icon-up-left 6s ease-in-out infinite;
                     font-size: 52px;
                   "
-                  >picture_as_pdf</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#fff" d="M224 0H0V512H384V160H224V0zm32 0V128H384L256 0zM64 224H88c30.9 0 56 25.1 56 56s-25.1 56-56 56H80v32 16H48V368 320 240 224H64zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H80v48h8zm72-80h16 24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H176 160V368 240 224zm32 128h8c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16h-8v96zm96-128h48 16v32H336 304v32h32 16v32H336 304v48 16H272V368 304 240 224h16z"/></svg></span
                 >
               </div>
+              
               <div
                 class="floatingIcon"
                 style="position: absolute; bottom: 0; left: 90%"
               >
                 <span
-                  class="material-icons"
+                  
                   style="
                     animation: icon-up 10s ease-in-out infinite;
                     font-size: 67px;
                   "
-                  >photo_library</span
+                  ><svg class="file-fa-icon-floating" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#fff" d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM256 128c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg></span
                 >
               </div>
             </div>
             <div class="upper-container">
               <!-- 1st -->
               <div class="image-card animated-icon">
-                <img src="./icons/041-folder.svg" alt="" />
+                <!-- <img src="./icons/041-folder.svg" alt="" /> -->
+                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                  <stop offset="0%"  />
+                  <stop offset="100%"/>
+                </linearGradient><path d="M512 384c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H394.5c-17 0-33.3-6.7-45.3-18.7L322.7 50.7c-12-12-28.3-18.7-45.3-18.7H160c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>
               </div>
               <!-- 2nd -->
               <!-- 3rd -->
               <div class="cloud-card animated-icon">
-                <img src="./icons/018-cloud-computing.svg" alt="" />
+                <!-- <img src="./icons/018-cloud-computing.svg" alt="" /> -->
+                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                  <stop offset="0%"  />
+                  <stop offset="100%"/>
+                </linearGradient><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"/></svg>
               </div>
             </div>
             <div class="lower-container">
               <div class="music-card animated-icon">
-                <img src="./icons/059-music note.svg" alt="" />
+                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                  <stop offset="0%"  />
+                  <stop offset="100%"/>
+                </linearGradient><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
               </div>
               <div
                 style="position: relative; z-index: 2"
@@ -445,14 +438,22 @@
                     - Upload a file below to get started -
                   </p>
                   <span
-                    class="material-icons"
+                    
                     style="animation: float-no-shadow 2s ease-in-out infinite"
-                    >keyboard_arrow_down</span
+                    >
+                    
+                    <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                    
+                    
+                    </span
                   >
                 </div>
               </div>
               <div class="password-card animated-icon">
-                <img src="./icons/secureupdate.svg" alt="" />
+                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><linearGradient id="lgrad" x1="100%" y1="100%" x2="0%" y2="0%" >
+                  <stop offset="0%"  />
+                  <stop offset="100%"/>
+                </linearGradient><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
               </div>
             </div>
           </div>
@@ -468,67 +469,106 @@
           transform: translatey(336px);
           overflow: hidden;
           margin-bottom: 10rem;
-          z-index: 2;
+          z-index: 1;
           position: relative;
         "
       >
         <div class="drop-area-child">
-          <div class="button-group toggle-button-group tabset--nav">
+          
+          
+            <!-- <nav class="tabset--nav">
+                <div class="nav--item -is--active" data-tab-target="tab-1">
+                    One
+                </div>
+                
+                <div class="nav--item" data-tab-target="tab-2">
+                    Two
+                </div>
+                
+                <div class="nav--item" data-tab-target="tab-3">
+                    Three
+                </div>
+                
+                <div class="nav--item" data-tab-target="tab-4">
+                    Four
+                </div>
+            </nav> -->
+
+
+     <div class="button-group toggle-button-group tabset--nav">
+            
+            <!-- 1 -->
             <div
               class="active upload-btn nav--item"
               role="tab"
-              id="slick-slide-control00"
-              aria-controls="slick-slide00"
-              aria-label="1 of 4"
-              tabindex="-1"
+              
+              data-tab-target="tab-1"
+              
             >
-              <img src="./icons/018-cloud-computing.svg" alt="" />
+            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M224 0H0V512H384V160H224V0zm32 0V128H384L256 0zM216 408v24H168V408 305.9l-31 31-17 17L86.1 320l17-17 72-72 17-17 17 17 72 72 17 17L264 353.9l-17-17-31-31V408z"/></svg>
             </div>
 
+            <!-- 2 -->
             <div
               class="mic-btn nav--item"
-           
-              id="slick-slide-control01"
-
-              aria-controls="slick-slide01"
-              aria-label="2 of 4"
-              tabindex="-1"
+              data-tab-target="tab-2"
+        
+              
 
             >
-              <img src="./icons/064-microphone.svg" alt="" />
+            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><linearGradient id="lgrad-nine" x1="100%" y1="100%" x2="0%" y2="0%" >
+              <stop offset="0%"  />
+              <stop offset="100%"/>
+            </linearGradient><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"/></svg>
             </div>
 
+            <!-- 3 -->
             <div
               class="camera-btn nav--item"
               data-tab-target="tab-3"
-              id="slick-slide-control03"
+              
             >
-              <img src="./icons/009-camera.svg" alt="" />
+            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><linearGradient id="lgrad-nine" x1="100%" y1="100%" x2="0%" y2="0%" >
+              <stop offset="0%"  />
+              <stop offset="100%"/>
+            </linearGradient><path class="fa-primary" d="M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"/><path class="fa-secondary" d="M352 288C352 341 309 384 256 384C202.1 384 160 341 160 288C160 234.1 202.1 192 256 192C309 192 352 234.1 352 288z"/></svg>
             </div>
 
+            <!-- 4 -->
             <div
               class="video-btn nav--item"
               data-tab-target="tab-4"
-              id="slick-slide-control04"
+              
             >
-              <img src="./icons/010-camera-video.svg" alt="" />
+            <svg class="file-fa-medium-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><linearGradient id="lgrad-nine" x1="100%" y1="100%" x2="0%" y2="0%" >
+              <stop offset="0%"  />
+              <stop offset="100%"/>
+            </linearGradient><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
             </div>
-          </div>
-
-          <div class="tabset--wrapper">
-            <div class="your-class" data-active-tab="tab-1">
+    </div>
+            
+          
+          
+            <div class="tabset--wrapper">
+            <div class="tabset--content" data-active-tab="tab-1">
               <!-- 1 -->
               <div
-                class="upload-border-file tabset--section"
+                class="upload-border-file tabset--section tab-file-section tabset--section"
+                data-slidernav="https://upload.dnscheck.io/icons/018-cloud-computing.svg"
                 style="text-align: center"
               >
                 <div
                   class="drop-instructions"
-                  style="padding-bottom: 10px; color: #4c9ca2"
+                  style="
+                    padding-bottom: 10px;
+                    color: #4c9ca2;
+                    margin-top: 15px;
+                    font-weight: 300;
+                  "
                 >
                   Drag & Drop files here to upload
                 </div>
-                <button class="browseButton">Browse Files</button>
+                <button class="browseButton" id="dragbtn">Browse Files</button>
                 <style>
                   .browseButton {
                     padding: 15px;
@@ -548,11 +588,40 @@
               </div>
 
               <!-- 2 -->
+              <!-- <div
+              class="upload-border-file tabset--section rec-btn-fixer tab-rec-section"
+              data-slidernav="https://upload.dnscheck.io/icons/064-microphone.svg"
+              style="text-align: center"
+              id="tab-rec-section"
+            >
+             <div class="wrapper">
+              <section class="main-controls">
+                <canvas class="visualizer"></canvas>
+                <div id="buttons">
+                  <button class="record">Record</button>
+                  <button class="stop">Stop</button>
+                </div>
+              </section>
+        
+              <section class="sound-clips">
+        
+        
+              </section>
+             </div>
+
+           
+            </div> -->
+
               <div
-                class="upload-border-file tabset--section rec-btn-fixer"
+                class="upload-border-file tabset--section"
+                data-slidernav="https://upload.dnscheck.io/icons/064-microphone.svg"
                 style="text-align: center"
+                id="tab-rec-section"
               >
-                <button class="browseButton">Record</button>
+                <button class="browseButton record-btn" id="micbtn">
+                  <span class="pulsating-circle"> </span>
+                  <span>RECORD</span>
+                </button>
                 <style>
                   .browseButton {
                     padding: 15px;
@@ -561,6 +630,7 @@
                     border-radius: 10px;
                     transition: background-color 1.5s ease;
                     width: auto;
+                    position: relative;
                   }
                   .browseButton:hover {
                     background-color: #e3e3e3;
@@ -573,7 +643,9 @@
 
               <!-- 3 -->
               <div
-                class="upload-border-file tabset--section"
+                class="upload-border-file tabset--section cam-slider-section tab-cam-section"
+                id="tab-cam-section"
+                data-slidernav="https://upload.dnscheck.io/icons/009-camera.svg"
                 style="text-align: center"
               >
                 <div class="cam-img-container">
@@ -583,8 +655,21 @@
                   />
                 </div>
 
-                <div class="img-cap-icon">
+                <div class="img-cap-icon-wrapper">
                   <img src="./icons/082-capture.svg" alt="" />
+
+                  <p>CAPTURE PHOTO</p>
+                </div>
+
+                <div class="image-cap-click-wrapper" style="display: none">
+                  <div class="pause-icon-wrapper" id="image-new">
+                    <img src="./icons/camera-white.svg" alt="" />
+                    <!-- <p>NEW PHOTO</p> -->
+                  </div>
+                  <div class="upload-icon-wrapper" id="image-upload">
+                    <img src="./icons/cloud-white.svg" alt="" />
+                    <!-- <p>UPLOAD</p> -->
+                  </div>
                 </div>
 
                 <style>
@@ -607,16 +692,34 @@
 
               <!-- 4 -->
               <div
-                class="upload-border-file tabset--section"
+                class="upload-border-file tabset--section cam-slider-section tab-video-section"
+                id="tab-video-section"
+                data-slidernav="https://upload.dnscheck.io/icons/010-camera-video.svg"
                 style="text-align: center"
               >
-                <div
-                  class="drop-instructions"
-                  style="padding-bottom: 10px; color: #4c9ca2"
-                >
-                  This is video
+                <div class="cam-video-container">
+                  <img
+                    src="https://imagingedge.sony.net/img/iewebcam/pc/PC_Webcam_M_1.jpg?fbclid=IwAR3tdzVb-7XlFV5Ip-hwmJCBWa1qghs0bM9HlbKx3-D5GwTlzjnIQxK2-pY"
+                    alt=""
+                  />
                 </div>
-                <button class="browseButton">Browse Files</button>
+
+                <div class="video-cap-icon-wrapper">
+                  <img src="./icons/010-camera-video.svg" alt="" />
+                  <p>RECORD</p>
+                </div>
+
+                <div class="video-cap-click-wrapper" style="display: none">
+                  <div class="pause-icon-wrapper">
+                    <img src="./icons/play-white.svg" alt="" />
+                    <!-- <p>PAUSE</p> -->
+                  </div>
+                  <div class="upload-icon-wrapper">
+                    <img src="./icons/cloud-white.svg" alt="" />
+                    <!-- <p>UPLOAD</p> -->
+                  </div>
+                </div>
+
                 <style>
                   .browseButton {
                     padding: 15px;
@@ -630,18 +733,28 @@
                     background-color: #e3e3e3;
                   }
                   *:focus {
-                    outline: 0 !important;
+                    outline: 0 !;
                   }
                 </style>
               </div>
             </div>
+
+            <!-- <ul class="slick-dots-loading" style="">
+            <li class="slick-active"><a><img src="https://upload.dnscheck.io/icons/018-cloud-computing.svg"></a></li>
+            <li class=""><a><img src="https://upload.dnscheck.io/icons/064-microphone.svg"></a></li>
+            <li class=""><a><img src="https://upload.dnscheck.io/icons/009-camera.svg"></a></li>
+            <li class=""><a><img src="https://upload.dnscheck.io/icons/010-camera-video.svg"></a></li>
+         </ul> -->
           </div>
           <!-- Files -->
           <div class="file-main" style="display: none">
-            <h2 style="text-align: center; color: grey; padding: 30px">
-              <span class="material-icons" style="vertical-align: middle"
-                >queue</span
-              >
+            <h2
+              class="your-uploads"
+              style="text-align: center; color: grey; padding: 30px"
+            >
+            
+
+              <svg class="file-fa-small-icon plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
               Your uploads
             </h2>
 
@@ -669,11 +782,7 @@
                 <div class="right-side">
                   <div class="validation-link-container">
                     <p>
-                      <span
-                        class="material-icons"
-                        style="vertical-align: middle"
-                        >link</span
-                      >
+                      <svg class="file-fa-small-icon-delete link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#606060" d="M0 256C0 167.6 71.6 96 160 96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-53 0-96 43-96 96s43 96 96 96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H160C71.6 416 0 344.4 0 256zm640 0c0 88.4-71.6 160-160 160H384c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c53 0 96-43 96-96s-43-96-96-96H384c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c88.4 0 160 71.6 160 160zM224 224H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
                       Your Link
                     </p>
                     <div
@@ -706,22 +815,16 @@
                         class="btn-blue copy-url"
                         data-copytarget="file-url"
                       >
-                        <span
-                          class="material-icons"
-                          style="margin-top: -5px; vertical-align: middle"
-                          >content_copy</span
-                        >
+                      
+
+                        <svg class="file-fa-small-icon-delete copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M232 344V280H168C154.7 280 144 269.3 144 256C144 242.7 154.7 232 168 232H232V168C232 154.7 242.7 144 256 144C269.3 144 280 154.7 280 168V232H344C357.3 232 368 242.7 368 256C368 269.3 357.3 280 344 280H280V344C280 357.3 269.3 368 256 368C242.7 368 232 357.3 232 344zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
                         Copy URL
                       </button>
                     </div>
                   </div>
                   <div class="validation-link-container">
                     <p>
-                      <span
-                        class="material-icons"
-                        style="vertical-align: middle"
-                        >edit</span
-                      >
+                      <svg class="file-fa-small-icon-delete link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#606060" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
                       Your Edit Link
                     </p>
                     <div
@@ -753,11 +856,7 @@
                         class="btn-blue copy-url"
                         data-copytarget="edit-url"
                       >
-                        <span
-                          class="material-icons"
-                          style="margin-top: -5px; vertical-align: middle"
-                          >content_copy</span
-                        >
+                      <svg class="file-fa-small-icon-delete copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M232 344V280H168C154.7 280 144 269.3 144 256C144 242.7 154.7 232 168 232H232V168C232 154.7 242.7 144 256 144C269.3 144 280 154.7 280 168V232H344C357.3 232 368 242.7 368 256C368 269.3 357.3 280 344 280H280V344C280 357.3 269.3 368 256 368C242.7 368 232 357.3 232 344zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
                         Copy Edit URL
                       </button>
                     </div>
@@ -775,11 +874,8 @@
                       class="pause-btn"
                       style="border: 0; background: none"
                     >
-                      <span
-                        class="material-icons pause"
-                        style="font-size: 54px; color: #d1d5db"
-                        >pause_circle_filled</span
-                      >
+                     
+                      <svg class="pause-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path fill="#fff" class="fa-primary" d="M191.1 160C174.3 160 160 174.3 160 191.1v128C160 337.7 174.3 352 192 352S224 337.7 224 320V191.1C224 174.3 209.7 160 191.1 160zM319.1 160C302.3 160 288 174.3 288 191.1v128C288 337.7 302.3 352 320 352S352 337.7 352 320V191.1C352 174.3 337.7 160 319.1 160z"/><path fill="#606060" class="fa-secondary" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM224 191.1v128C224 337.7 209.7 352 192 352S160 337.7 160 320V191.1C160 174.3 174.3 160 191.1 160S224 174.3 224 191.1zM352 191.1v128C352 337.7 337.7 352 320 352S288 337.7 288 320V191.1C288 174.3 302.3 160 319.1 160S352 174.3 352 191.1z"/></svg>
                     </button>
                   </div>
 
@@ -857,11 +953,7 @@
                       class="delete-file"
                       style="border: 0; background: none"
                     >
-                      <span
-                        class="material-icons cross"
-                        style="font-size: 54px; color: #d1d5db"
-                        >cancel</span
-                      >
+                    <svg class="cross-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path fill="#fff""" class="fa-primary" d="M255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1z"/><path fill="#606060" class="fa-secondary" d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM175 208.1L222.1 255.1L175 303C165.7 312.4 165.7 327.6 175 336.1C184.4 346.3 199.6 346.3 208.1 336.1L255.1 289.9L303 336.1C312.4 346.3 327.6 346.3 336.1 336.1C346.3 327.6 346.3 312.4 336.1 303L289.9 255.1L336.1 208.1C346.3 199.6 346.3 184.4 336.1 175C327.6 165.7 312.4 165.7 303 175L255.1 222.1L208.1 175C199.6 165.7 184.4 165.7 175 175C165.7 184.4 165.7 199.6 175 208.1V208.1z"/></svg>
                     </button>
                   </div>
                 </div>
@@ -882,8 +974,9 @@
                       margin-right: 14px;
                     "
                   >
-                    <span
+                    <!-- <span
                       class="material-icons file-icon"
+                      id="myFileIcon"
                       style="
                         font-size: 54px;
                         padding: 0;
@@ -892,7 +985,13 @@
                         margin-left: -5px;
                       "
                       >description</span
-                    >
+                    > -->
+
+                    <svg class="file-fa-preview-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M152 120c-26.51 0-48 21.49-48 48s21.49 48 48 48s48-21.49 48-48S178.5 120 152 120zM447.1 32h-384C28.65 32-.0091 60.65-.0091 96v320c0 35.35 28.65 64 63.1 64h384c35.35 0 64-28.65 64-64V96C511.1 60.65 483.3 32 447.1 32zM463.1 409.3l-136.8-185.9C323.8 218.8 318.1 216 312 216c-6.113 0-11.82 2.768-15.21 7.379l-106.6 144.1l-37.09-46.1c-3.441-4.279-8.934-6.809-14.77-6.809c-5.842 0-11.33 2.529-14.78 6.809l-75.52 93.81c0-.0293 0 .0293 0 0L47.99 96c0-8.822 7.178-16 16-16h384c8.822 0 16 7.178 16 16V409.3z"/></svg>
+
+
+                    
+
                   </div>
                   <div>
                     <h3>
@@ -934,20 +1033,13 @@
                     style="margin-bottom: 20px; width: 100%"
                     class="settings-btn btn-blue"
                   >
-                    <span
-                      style="vertical-align: middle; margin-top: -2px"
-                      class="material-icons"
-                      >build_circle</span
-                    >
+                   
+                    <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M352 320c88.4 0 160-71.6 160-160c0-15.3-2.2-30.1-6.2-44.2c-3.1-10.8-16.4-13.2-24.3-5.3l-76.8 76.8c-3 3-7.1 4.7-11.3 4.7H336c-8.8 0-16-7.2-16-16V118.6c0-4.2 1.7-8.3 4.7-11.3l76.8-76.8c7.9-7.9 5.4-21.2-5.3-24.3C382.1 2.2 367.3 0 352 0C263.6 0 192 71.6 192 160c0 19.1 3.4 37.5 9.5 54.5L19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L297.5 310.5c17 6.2 35.4 9.5 54.5 9.5zM80 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg>
                     Change file settings
                   </button>
 
                   <button class="upload-btn btn-green">
-                    <span
-                      style="vertical-align: middle; margin-top: -2px"
-                      class="material-icons"
-                      >upload</span
-                    >
+                    <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24z"/></svg>
                     Upload This file
                   </button>
                 </div>
@@ -970,14 +1062,14 @@
                 <img
                   width="570"
                   height="512"
-                  src="img/animated/01.png"
+                  src="img/animated/01.svg"
                   alt="main-bg"
                   class="main-bg animatable pixFade"
                 />
                 <img
                   width="132"
                   height="132"
-                  src="img/animated/02.png"
+                  src="img/animated/02.svg"
                   alt="main-bg"
                   class="elm-clock animatable FadeLeft"
                   data-wow-delay="0.5s"
@@ -985,7 +1077,7 @@
                 <img
                   width="290"
                   height="402"
-                  src="img/animated/03.png"
+                  src="img/animated/03.svg"
                   alt="elm-man"
                   class="elm-man animatable pixFadeRight"
                   data-wow-delay="0.7s"
@@ -993,7 +1085,7 @@
                 <img
                   width="448"
                   height="214"
-                  src="img/animated/04.png"
+                  src="img/animated/04.svg"
                   alt="elm-table"
                   class="elm-table animatable pixFadeUp"
                   data-wow-delay="0.1s"
@@ -1001,7 +1093,7 @@
                 <img
                   width="42"
                   height="77"
-                  src="img/animated/05.png"
+                  src="img/animated/05.svg"
                   alt="main-bg"
                   class="elm-sm-vase animatable pixFade"
                   data-wow-delay="0.9s"
@@ -1009,7 +1101,7 @@
                 <img
                   width="160"
                   height="223"
-                  src="img/animated/06.png"
+                  src="img/animated/06.svg"
                   alt="elm-vase"
                   class="elm-vase animatable pixFadeLeft"
                   data-wow-delay="0.9s"
@@ -1021,7 +1113,7 @@
                   <img
                     width="134"
                     height="87"
-                    src="img/animated/07.png"
+                    src="img/animated/07.svg"
                     alt="massage"
                     class="mass-img"
                   />
@@ -1057,7 +1149,7 @@
 
                 <a
                   href="#"
-                  class="pix-btn color-two animatable pixFadeUp"
+                  class="pix-btn color-two animatable pixFadeUp newmarufclass"
                   data-wow-delay="0.9s"
                   >Discover More About Supported File Types</a
                 >
@@ -1097,9 +1189,45 @@
                 class="list-items color-two animatable pixFadeUp"
                 data-wow-delay="0.4s"
               >
-                <li>Quick Access</li>
-                <li>Easily Manage</li>
-                <li>7/24h Support</li>
+                <li>
+
+                  <span>
+                    <svg class="file-fa-icon shield-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                  </span>
+                  
+                  <span>
+                    Quick Access
+                  </span>
+                 
+                </li>
+                
+                
+                
+                <li>
+
+                  <span>
+                    <svg class="file-fa-icon shield-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                  </span>
+                  
+                  <span>
+                    Easily Manage
+                  </span>
+                 
+                </li>
+                
+                
+                
+                <li>
+
+                  <span>
+                    <svg class="file-fa-icon shield-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                  </span>
+                  
+                  <span>
+                    7/24 Support
+                  </span>
+                 
+                </li>
               </ul>
 
               <a
@@ -1195,12 +1323,6 @@
                   vagabond David, I don't want no agro what a load.!
                 </p>
 
-                <a href="#" class="more-btn">
-                  <!-- <i class="ei ei-arrow_right"></i
-                > -->
-                  <img src="./icons/077-right-arrow.svg" alt="right arrow" />
-                </a>
-
                 <svg
                   class="layer"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1240,12 +1362,6 @@
                   The full monty twit cracking goal Jeffrey lurgy chinwag bobby
                   vagabond David, I don't want no agro what a load.!
                 </p>
-
-                <a href="#" class="more-btn">
-                  <!-- <i class="ei ei-arrow_right"></i
-                > -->
-                  <img src="./icons/077-right-arrow.svg" alt="right arrow" />
-                </a>
               </div>
 
               <svg
@@ -1285,12 +1401,6 @@
                   The full monty twit cracking goal Jeffrey lurgy chinwag bobby
                   vagabond David, I don't want no agro what a load.!
                 </p>
-
-                <a href="#" class="more-btn">
-                  <!-- <i class="ei ei-arrow_right"></i
-                > -->
-                  <img src="./icons/077-right-arrow.svg" alt="right arrow" />
-                </a>
               </div>
 
               <svg
@@ -1330,12 +1440,6 @@
                   The full monty twit cracking goal Jeffrey lurgy chinwag bobby
                   vagabond David, I don't want no agro what a load.!
                 </p>
-
-                <a href="#" class="more-btn">
-                  <!-- <i class="ei ei-arrow_right"></i
-                > -->
-                  <img src="./icons/077-right-arrow.svg" alt="right arrow" />
-                </a>
               </div>
 
               <svg
@@ -1375,12 +1479,6 @@
                   The full monty twit cracking goal Jeffrey lurgy chinwag bobby
                   vagabond David, I don't want no agro what a load.!
                 </p>
-
-                <a href="#" class="more-btn">
-                  <!-- <i class="ei ei-arrow_right"></i
-                > -->
-                  <img src="./icons/077-right-arrow.svg" alt="right arrow" />
-                </a>
               </div>
 
               <svg
@@ -1415,12 +1513,6 @@
                   The full monty twit cracking goal Jeffrey lurgy chinwag bobby
                   vagabond David, I don't want no agro what a load.!
                 </p>
-
-                <a href="#" class="more-btn">
-                  <!-- <i class="ei ei-arrow_right"></i
-                > -->
-                  <img src="./icons/077-right-arrow.svg" alt="right arrow" />
-                </a>
               </div>
 
               <svg
@@ -2082,73 +2174,64 @@
         </div>
         <!-- /.section-title -->
 
+        <!-- /.countup-wrapper -->
+
+        <!-- demo -->
         <div class="countup-wrapper">
           <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="fun-fact animatable pixFadeUp" data-wow-delay="0.3s">
-                <div class="counter">
-                  <h4 class="count" data-counter="14">14</h4>
-                  <span>K+</span>
+            <!-- 1 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="counter">
+                <div class="counter-icon">
+                  <img src="./icons/031-download.svg" alt="" />
                 </div>
-                <!-- /.counter -->
-
-                <p>Total Download</p>
-              </div>
-              <!-- /.fun-fact -->
-            </div>
-            <!-- /.col-lg-3 col-md-6 col-sm-6 -->
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div
-                class="fun-fact color-two animatable pixFadeUp"
-                data-wow-delay="0.5s"
-              >
-                <div class="counter">
-                  <h4 class="count" data-counter="13">13</h4>
-                  <span>M+</span>
+                <div class="counter-content">
+                  <h3>Downloads</h3>
+                  <span class="counter-value" data-counter="1387">1387</span>
                 </div>
-                <!-- /.counter -->
-                <p>Total Download</p>
               </div>
-              <!-- /.fun-fact -->
             </div>
-            <!-- /.col-lg-3 col-md-6 col-sm-6 -->
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div
-                class="fun-fact color-three animatable pixFadeUp"
-                data-wow-delay="0.7s"
-              >
-                <div class="counter">
-                  <h4 class="count" data-counter="244">244</h4>
-                  <span>+</span>
+            <!-- 2 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="counter blue">
+                <div class="counter-icon">
+                  <img src="./icons/096-upload.svg" alt="" />
                 </div>
-                <!-- /.counter -->
-                <p>Total Download</p>
+                <div class="counter-content">
+                  <h3>Uploads</h3>
+                  <span class="counter-value" data-counter="1310">1310</span>
+                </div>
               </div>
-              <!-- /.fun-fact -->
             </div>
-            <!-- /.col-lg-3 col-md-6 col-sm-6 -->
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div
-                class="fun-fact color-four animatable pixFadeUp"
-                data-wow-delay="0.9s"
-              >
-                <div class="counter">
-                  <h4 class="count" data-counter="53">53</h4>
-                  <span>M+</span>
+            <!-- 3 -->
+            <div class="col-lg-3 col-md-6 mtop-fix">
+              <div class="counter">
+                <div class="counter-icon">
+                  <img src="./icons/097-user.svg" alt="" />
                 </div>
-                <!-- /.counter -->
-                <p>Total Download</p>
+                <div class="counter-content">
+                  <h3>Unique users</h3>
+                  <span class="counter-value" data-counter="1387">1387</span>
+                </div>
               </div>
-              <!-- /.fun-fact -->
             </div>
-            <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+            <!-- 4 -->
+            <div class="col-lg-3 col-md-6 mtop-fix">
+              <div class="counter blue">
+                <div class="counter-icon">
+                  <img src="./icons/server-counter.svg" alt="" />
+                </div>
+                <div class="counter-content">
+                  <h3>Bandwidth</h3>
+                  <span class="counter-value" data-counter="1310">1310</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- /.row -->
         </div>
-        <!-- /.countup-wrapper -->
       </div>
       <!-- /.container -->
 
@@ -2205,7 +2288,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <i class="material-icons" data-icon="close"></i>
+            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
             </button>
           </div>
           <div class="modal-body">
@@ -2238,8 +2321,15 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          ><img src="../img/file-icon.svg" alt="history"
-                        /></a>
+                          >
+                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">">
+                            <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                            <stop offset="0%"  />
+                            <stop offset="100%"/>
+                          </linearGradient>
+                          <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
+                      
+                      </a>
                       </div>
                       <div class="info">
                         <h4 class="history-title">
@@ -2257,10 +2347,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <i
-                        class="material-icons history-edit-icon"
-                        data-icon="edit_note"
-                      ></i>
+                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2269,8 +2359,14 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          ><img src="../img/file-icon.svg"" alt="saspik history"
-                          /></a
+                          >
+                          
+                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                            <stop offset="0%"  />
+                            <stop offset="100%"/>
+                          </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
+                          
+                          </a
                         >
                       </div>
                       <div class="info">
@@ -2289,10 +2385,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <i
-                        class="material-icons history-edit-icon"
-                        data-icon="edit_note"
-                      ></i>
+                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2301,8 +2397,13 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          ><img src="../img/file-icon.svg"" alt="saspik history"
-                          /></a
+                          >
+                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                            <stop offset="0%"  />
+                            <stop offset="100%"/>
+                          </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
+                          
+                          </a
                         >
                       </div>
                       <div class="info">
@@ -2319,10 +2420,10 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <i
-                        class="material-icons history-edit-icon"
-                        data-icon="edit_note"
-                      ></i>
+                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
                     </div>
                   </div>
                   <!-- /.history__list -->
@@ -2331,8 +2432,12 @@
                     <div class="history-info">
                       <div class="company-logo">
                         <a href="#"
-                          ><img src="../img/file-icon.svg"" alt="saspik history"
-                          /></a
+                          >
+                          <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                            <stop offset="0%"  />
+                            <stop offset="100%"/>
+                          </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
+                          </a
                         >
                       </div>
                       <div class="info">
@@ -2349,94 +2454,33 @@
                     </div>
 
                     <div class="history-header history-edit file-edit">
-                      <i
-                        class="material-icons history-edit-icon"
-                        data-icon="edit_note"
-                      ></i>
+                      <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">  <linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                        <stop offset="0%"  />
+                        <stop offset="100%"/>
+                      </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V285.7l-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
                     </div>
                   </div>
                   <!-- /.history__list -->
 
-                  <div class="history__list">
-                    <div class="history-info">
-                      <div class="company-logo">
-                        <a href="#"
-                          ><img src="../img/file-icon.svg"" alt="saspik history"
-                          /></a
-                        >
-                      </div>
-                      <div class="info">
-                        <h4 class="history-title"><a href="#">home.gif</a></h4>
-                      </div>
+                  <div class="history-pagination-wrapper">
+                    <div class="showing-result">
+                      <p class="show-result">
+                        Showing <span>6</span> of <span>1300</span> Latest Files
+                      </p>
                     </div>
 
-                    <div class="history-time file-size">
-                      <span>349kb</span>
-                    </div>
-
-                    <div class="history-location file-date">
-                      <span>12/3/2022</span>
-                    </div>
-
-                    <div class="history-header history-edit file-edit">
-                      <i
-                        class="material-icons history-edit-icon"
-                        data-icon="edit_note"
-                      ></i>
-                    </div>
+                    <ul class="history-pagination">
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">....</a></li>
+                      <li><a href="#">30</a></li>
+                    </ul>
                   </div>
-                  <!-- /.history__list -->
-
-                  <div class="history__list">
-                    <div class="history-info">
-                      <div class="company-logo">
-                        <a href="#"
-                          ><img src="../img/file-icon.svg" alt="saspik history"
-                        /></a>
-                      </div>
-                      <div class="info">
-                        <h4 class="history-title">
-                          <a href="#">home.gif</a>
-                        </h4>
-                      </div>
-                    </div>
-
-                    <div class="history-time file-size">
-                      <span>300kb</span>
-                    </div>
-
-                    <div class="history-location file-date">
-                      <span>2/3/2022</span>
-                    </div>
-
-                    <div class="history-header history-edit file-edit">
-                      <i
-                        class="material-icons history-edit-icon"
-                        data-icon="edit_note"
-                      ></i>
-                    </div>
-                  </div>
-                  <!-- /.history__list -->
+                  <!-- /.history-pagination-wrapper -->
                 </div>
-
-                <div class="history-pagination-wrapper">
-                  <div class="showing-result">
-                    <p class="show-result">
-                      Showing <span>6</span> of <span>1300</span> Latest Files
-                    </p>
-                  </div>
-
-                  <ul class="history-pagination">
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">....</a></li>
-                    <li><a href="#">30</a></li>
-                  </ul>
-                </div>
-                <!-- /.history-pagination-wrapper -->
+                <!-- /.container -->
               </div>
-              <!-- /.container -->
             </section>
           </div>
         </div>
@@ -2467,7 +2511,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <i class="material-icons" data-icon="close"></i>
+            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
             </button>
           </div>
           <div class="modal-body">
@@ -2505,88 +2549,6 @@
 
     <!-- file setting modal-->
 
-    <div
-      class="modal fade"
-      id="fileSettingModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="fileSettingModalLabel"
-      aria-hidden="true"
-      style="z-index: 100"
-    >
-      <div
-        class="modal-dialog fileSettingModalDiaglog inbox-modal modal-dialog-centered"
-      >
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title custom-title" id="inboxModalLabel">
-              File Settings
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <!-- <span aria-hidden="true">&times;</span> -->
-              <i class="material-icons" data-icon="close"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="historys">
-                <div class="history__list file-setting-list">
-                  <div class="history-info">
-                    <div class="company-logo">
-                      <a href="#"
-                        ><img src="../img/file-icon.svg" alt="saspik history"
-                      /></a>
-                    </div>
-                    <div class="info">
-                      <h4 class="history-title">
-                        <a href="#">ava.png</a>
-                      </h4>
-                    </div>
-                  </div>
-
-                  <div class="history-time file-size">
-                    <span>4mb</span>
-                  </div>
-
-                  <div class="history-location file-date">
-                    <span>11/8/2022</span>
-                  </div>
-                </div>
-                <!-- /.history__list -->
-                <div>
-                  <button
-                    data-toggle="modal"
-                    data-target="#passwordModal"
-                    class="btn-password-grad"
-                  >
-                    <i class="material-icons" data-icon="lock"></i>
-                    <span>Password Protect</span>
-                  </button>
-                  <button class="btn-delete-grad">
-                    <i class="material-icons" data-icon="delete_outline"></i>
-                    <span>Delete</span>
-                  </button>
-
-                  <button
-                    class="btn-expiry-grad"
-                    data-toggle="modal"
-                    data-target="#dateTimeModal"
-                  >
-                    <i class="material-icons" data-icon="delete_outline"></i>
-                    <span>Set Expiration Date</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- end of file setting modal -->
 
@@ -2614,7 +2576,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <i class="material-icons" data-icon="close"></i>
+            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
             </button>
           </div>
           <div class="modal-body">
@@ -2635,74 +2597,7 @@
     <!-- end of password modal -->
 
     <!-- date time modal -->
-    <div
-      class="modal fade"
-      id="dateTimeModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="dateTimedModalLabel"
-      aria-hidden="true"
-      style="z-index: 101"
-    >
-      <div
-        class="modal-dialog toggleModalDiaglog inbox-modal modal-dialog-centered"
-      >
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title custom-title" id="inboxModalLabel">
-              Choose Date
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="material-icons" data-icon="close"></i>
-            </button>
-          </div>
-          <div class="modal-body date-time-modal">
-            <section class="date-time-section">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="content">
-                      <div class="form-group">
-                        <label>Date</label>
-                        <div class="input-group date" id="datepicker">
-                          <input class="" placeholder="MM/DD/YYYY" /><span
-                            class="input-group-append input-group-addon"
-                            ><span class="input-group-text">
-                              <i
-                                class="material-icons date-icon input-prefix"
-                                data-icon="calendar_today"
-                              ></i></span
-                          ></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>Time</label>
-                        <div class="input-group time" id="timepicker">
-                          <input class="" placeholder="HH:MM AM/PM" /><span
-                            class="input-group-append input-group-addon"
-                            ><span class="input-group-text"
-                              ><i
-                                class="material-icons date-icon input-prefix"
-                                data-icon="schedule"
-                              ></i></span
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.container -->
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- end of date-time modal -->
 
     <!-- new style setting modal -->
@@ -2728,7 +2623,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <i class="material-icons" data-icon="close"></i>
+            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
             </button>
           </div>
           <div class="modal-body settingModal">
@@ -2764,15 +2659,21 @@
                   <!-- 3 -->
                   <li class="nav-item">
                     <a
-                      class="nav-link"
+                      class="nav-link nav-with-icon"
                       id="passwordSetting-tab"
                       data-toggle="tab"
                       href="#passwordSetting"
                       role="tab"
                       aria-controls="passwordSetting"
                       aria-selected="false"
-                      >Password</a
                     >
+                    
+                      <span>
+                        <svg class="file-fa-check-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337l-17 17-17-17-64 -64-17-17L160 222.1l17 17 47 47L335 175l17-17L385.9 192l-17 17z"/></svg>
+
+                      </span>
+                      <span>Password</span>
+                    </a>
                   </li>
 
                   <!-- 4 -->
@@ -2792,15 +2693,19 @@
                   <!-- 5 -->
                   <li class="nav-item">
                     <a
-                      class="nav-link"
+                      class="nav-link nav-with-icon"
                       id="expireSetting-tab"
                       data-toggle="tab"
                       href="#expireSetting"
                       role="tab"
                       aria-controls="expireSetting"
                       aria-selected="false"
-                      >Expiry Date</a
                     >
+                      <span>
+                        <svg class="file-fa-check-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337l-17 17-17-17-64 -64-17-17L160 222.1l17 17 47 47L335 175l17-17L385.9 192l-17 17z"/></svg>
+                      </span>
+                      <span>Expiry Date</span>
+                    </a>
                   </li>
                 </ul>
                 <div class="tab-content animation-tab" id="myTabContent">
@@ -2812,8 +2717,20 @@
                     aria-labelledby="home-tab"
                   >
                     <section>
+                      <div
+                        class="tab-modal-title"
+                        style="transform: translatey(-100px)"
+                      >
+                        <h5>Animation Setting</h5>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Tempore, omnis?
+                        </p>
+                      </div>
+
                       <div class="container toggleWrapper">
                         <!-- 1 -->
+
                         <div class="animation-toggle">
                           <p>Enable Animation</p>
                           <div>
@@ -2852,15 +2769,30 @@
                     aria-labelledby="fileSetting-tab"
                   >
                     <div class="container">
+                      <div
+                        class="tab-modal-title"
+                        style="transform: translatey(-100px)"
+                      >
+                        <h5>File Setting</h5>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Tempore, omnis?
+                        </p>
+                      </div>
+
                       <div class="historys">
                         <div class="history__list file-setting-list">
                           <div class="history-info">
                             <div class="company-logo">
                               <a href="#"
-                                ><img
-                                  src="../img/file-icon.svg"
-                                  alt="saspik history"
-                              /></a>
+                                >
+                                
+                                <svg class="file-fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">"><linearGradient id="lgrad-two" x1="100%" y1="100%" x2="0%" y2="0%" >
+                                  <stop offset="0%"  />
+                                  <stop offset="100%"/>
+                                </linearGradient><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>
+                            
+                            </a>
                             </div>
                             <div class="info">
                               <h4 class="history-title">
@@ -2870,7 +2802,7 @@
                           </div>
 
                           <div class="history-time file-size">
-                            <span>4mb</span>
+                            <span>8mb</span>
                           </div>
 
                           <div class="history-location file-date">
@@ -2891,13 +2823,35 @@
                     aria-labelledby="passwordSetting-tab"
                   >
                     <div class="container">
+                      <div
+                        class="tab-modal-title"
+                        style="transform: translatey(-100px)"
+                      >
+                        <h5>Set Password</h5>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Tempore, omnis?
+                        </p>
+                      </div>
+
                       <section>
                         <div class="container">
-                          <input
-                            class="modal-password"
-                            type="password"
-                            placeholder="Enter Your Password"
-                          />
+                          <form action="" id="pass-form">
+                            <input
+                              class="modal-password"
+                              type="password"
+                              placeholder="Enter Your Password"
+                            />
+
+                            <button
+                              class="pix-btn color-two set-password-btn"
+                              type="submit"
+                            >
+                              <span class="password-btn-text"
+                                >SET PASSWORD</span
+                              >
+                            </button>
+                          </form>
                         </div>
                         <!-- /.container -->
                       </section>
@@ -2912,12 +2866,20 @@
                     aria-labelledby="deleteSetting-tab"
                   >
                     <div class="container">
+                      <div
+                        class="tab-modal-title"
+                        style="transform: translatey(-100px)"
+                      >
+                        <h5>Delete File</h5>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Tempore, omnis?
+                        </p>
+                      </div>
+
                       <div>
                         <button class="btn-delete-grad">
-                          <i
-                            class="material-icons"
-                            data-icon="delete_outline"
-                          ></i>
+                          <svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
                           <span>Delete</span>
                         </button>
                       </div>
@@ -2936,38 +2898,57 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <div class="content">
-                              <div class="form-group">
-                                <label>Date</label>
-                                <div class="input-group date" id="datepicker">
-                                  <input
-                                    class=""
-                                    placeholder="MM/DD/YYYY"
-                                  /><span
-                                    class="input-group-append input-group-addon"
-                                    ><span class="input-group-text">
-                                      <i
-                                        class="material-icons date-icon input-prefix"
-                                        data-icon="calendar_today"
-                                      ></i></span
-                                  ></span>
-                                </div>
+                              <div
+                                class="tab-modal-title"
+                                style="transform: translatey(-100px)"
+                              >
+                                <h5>Expiry Date</h5>
+                                <p>
+                                  Lorem ipsum dolor, sit amet consectetur
+                                  adipisicing elit. Tempore, omnis?
+                                </p>
                               </div>
-                              <div class="form-group">
-                                <label>Time</label>
-                                <div class="input-group time" id="timepicker">
+
+                              <!-- timepicker -->
+
+                              <form id="picktime" name="expiryForm">
+                                <div>
                                   <input
-                                    class=""
-                                    placeholder="HH:MM AM/PM"
-                                  /><span
-                                    class="input-group-append input-group-addon"
-                                    ><span class="input-group-text"
-                                      ><i
-                                        class="material-icons date-icon input-prefix"
-                                        data-icon="schedule"
-                                      ></i></span
-                                  ></span>
+                                    class="digit-input second-latest"
+                                    type="text"
+                                    maxLength="1"
+                                    size="1"
+                                    pattern="[0-9]{1}"
+                                  />
+                                  <input
+                                    id="second-input"
+                                    class="digit-input latest"
+                                    type="text"
+                                    maxLength="1"
+                                    size="1"
+                                    pattern="[0-9]{1}"
+                                  />
+
+                                  <!-- select category -->
+                                  <select
+                                    id="timeformat"
+                                    class="am-pm"
+                                    placeholder="timeformat"
+                                    style="border-radius: 1rem"
+                                  >
+                                    <option>minutes</option>
+                                    <option>hour</option>
+                                    <option>day</option>
+                                  </select>
                                 </div>
-                              </div>
+
+                                <button
+                                  class="pix-btn color-two set-expiry-btn"
+                                  type="submit"
+                                >
+                                  <span class="expiry-btn-text">ACTIVATE</span>
+                                </button>
+                              </form>
                             </div>
                           </div>
                         </div>
@@ -3009,7 +2990,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <i class="material-icons" data-icon="close"></i>
+            <svg class="file-fa-small-icon-close-it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
             </button>
           </div>
           <div class="modal-body">
@@ -3020,10 +3001,7 @@
                   <span class="captcha"></span>
                 </div>
                 <button class="reload-btn">
-                  <i
-                    class="material-icons refresh-icon"
-                    data-icon="refresh"
-                  ></i>
+                  <svg class="file-fa-medium-refresh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M142.9 142.9c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5c0 0 0 0 0 0H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5c7.7-21.8 20.2-42.3 37.8-59.8zM16 312v7.6 .7V440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8H48.4h-.7H40c-13.3 0-24 10.7-24 24z"/></svg>
                 </button>
               </div>
               <form action="#" class="input-area">
@@ -3159,12 +3137,45 @@
         <input type="file" id="fileTarget" multiple />
         <input type="submit" />
       </form>
+
+      <form method="post" action="" id="micForm">
+        <!-- <input
+          type="file"
+          accept="audio/*;capture=microphone"
+          id="micTarget"
+          multiple
+        /> -->
+        <video autoplay></video>
+        <input type="submit" />
+      </form>
     </div>
+
+    <device type="media" onchange="update(this.data)"></device>
+    <!-- <video autoplay></video> -->
+    <script>
+      function update(stream) {
+        document.querySelector('video').src = stream.url;
+      }
+    </script>
 
     <script>
       /* Drag and drop */
       var showDrag = false;
       var timeout = -1;
+
+      function restart() {
+        // $('.content-slider').slick('slickGoTo', 0);
+      }
+
+      function toggleUpload() {
+        $('#dragbtn').css('opacity', '1');
+        $('.upload-border-file').removeClass('drag-in-uploader');
+        $('.drop-instructions').html('Drag & Drop files here to upload');
+      }
+
+      $('.drop-instructions').click(function () {
+        $('#dragbtn').click();
+      });
 
       $('html').bind('dragenter', function (e) {
         e.preventDefault();
@@ -3175,6 +3186,12 @@
           800
         );
         console.log('I am draging');
+
+        $('#dragbtn').css('opacity', '0');
+
+        $('.drop-instructions').html('Drop your file here to upload');
+
+        restart();
 
         var dt = e.originalEvent.dataTransfer;
 
@@ -3187,6 +3204,7 @@
           // $('.drag-container').fadeIn();
           // $('.upload-border').css('background-color', 'yellowgreen');
           $('.upload-border-file').addClass('drag-in-uploader');
+          // $('slick-list').css('height', '185px');
           // scroll to top
           // playIntroAnimation();
 
@@ -3201,16 +3219,24 @@
 
       $('html').bind('dragleave', function (e) {
         showDrag = false;
+
+        // $('#dragbtn').css('opacity', '1');
+
         clearTimeout(timeout);
         timeout = setTimeout(function () {
           if (!showDrag) {
-            // $('.drag-container').fadeOut();
-            $('.upload-border-file').removeClass('drag-in-uploader');
+            toggleUpload();
           }
         }, 200);
       });
 
       document.body.addEventListener('drop', drop, false);
+
+      var myNotify = new notificationManager({
+        container: $('#notificationsContainer'),
+        message: 'Notification message here',
+        position: 'bottomright',
+      });
 
       function drop(e) {
         e.stopPropagation();
@@ -3218,7 +3244,8 @@
         console.log('I am dropped');
 
         setTimeout(function () {
-          $('.upload-border-file').removeClass('drag-in-uploader');
+          toggleUpload();
+
           $('.drag-container').fadeOut();
         }, 100);
 
@@ -3229,6 +3256,18 @@
 
         for (var i = 0; i < files.length; i++) {
           addFileToList(files[i]);
+
+          if (!isDuplicate(files[i])) {
+            myNotify.addNotification({
+              // message: `${files[i].name} has been added to your upload queue`,
+              message: `<div><svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> <p>${files[i].name} has been added to your upload queue</p></div>`,
+              animate: true, //boolean: animate the fade in and fade out
+              autoRemove: true, //boolean: remove this notification after 6 seconds (adds progress bar animation)
+              backgroundColor: '#27abdb', //string: background color of the notification
+              progressColor: '#135973', //string: color of the progress timer/bar
+              color: 'white', //string: notification text color
+            });
+          }
         }
       }
 
@@ -3344,22 +3383,82 @@
         return false;
       });
 
-      $('.upload-border-file').click(function () {
+      $('#dragbtn').click(function () {
         $('#fileTarget').click();
       });
 
+      $('#micbtn').click(function () {
+        function hasGetUserMedia() {
+          return !!(
+            navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia
+          );
+        }
+
+        if (hasGetUserMedia()) {
+          // Good to go!
+          console.log('I am maruf');
+          var errorCallback = function (e) {
+            console.log('Reeeejected!', e);
+          };
+
+          // Not showing vendor prefixes.
+          navigator.getUserMedia(
+            { video: false, audio: true },
+            function (localMediaStream) {
+              var video = document.querySelector('video');
+              console.log({ video });
+              video.src = window.URL.createObjectURL(localMediaStream);
+
+              // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
+              // See crbug.com/110938.
+              video.onloadedmetadata = function (e) {
+                // Ready to go. Do some stuff.
+              };
+            },
+            errorCallback
+          );
+        } else {
+          alert('getUserMedia() is not supported in your browser');
+        }
+        $('#micTarget').click();
+      });
+
+      // var myNotify = new notificationManager({
+      //   container: $('#notificationsContainer'),
+      //   message: 'Notification message here',
+      //   position: 'topleft',
+      // });
+
       $('#fileTarget').on('change', function () {
+        // alert('I am back');
         console.log(this);
         fileElement = this;
 
         for (var i = 0; i < this.files.length; i++) {
+          console.log({ name: this.files[i].name });
           addFileToList(this.files[i]);
+
+          if (!isDuplicate(this.files[i])) {
+            myNotify.addNotification({
+              // message: `${this.files[i].name} has been added to your upload queue`,
+              message: `<div><svg class="file-fa-small-icon-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> <p>${this.files[i].name} has been added to your upload queue</p></div>`,
+              animate: true, //boolean: animate the fade in and fade out
+              autoRemove: true, //boolean: remove this notification after 6 seconds (adds progress bar animation)
+              backgroundColor: '#27abdb', //string: background color of the notification
+              progressColor: '#135973', //string: color of the progress timer/bar
+              color: 'white', //string: notification text color
+            });
+          }
         }
 
         console.log('file change');
       });
 
       function isDuplicate(file) {
+        console.log('is duplicate is called');
         for (var i = 0; i < Object.keys(fileList).length; i++) {
           if (
             file.name == fileList[i].fileObject.name &&
@@ -3668,6 +3767,7 @@
             $('#file-' + index)
               .find('.slide-container')
               .attr('class', 'slide-container animated fadeOutRightBig');
+            console.log('I am file div');
           }, 3000);
 
           setTimeout(function () {
@@ -3998,6 +4098,7 @@
 
             success: function (data) {
               playIntroAnimation();
+              console.log('I am success');
 
               var jsonData = JSON.parse(data);
 
@@ -4078,12 +4179,26 @@
               var fileCardHeight = $('#file-' + newIndex).height() + 54;
 
               var animationSpeed = 1000;
-              var slideInTimeout = 1000;
+              var slideInTimeout = 1500;
 
               if (fileCount < 1) {
                 animationSpeed = 0;
+                // slideInTimeout = 1500;
                 slideInTimeout = 1500;
+
                 console.log('heeere');
+              }
+
+              if (fileCount > 0) {
+                $('.fileIcon span').css('opacity', '0');
+                $('.fileIcon-wrapper').removeClass('open');
+
+                $('.material-icons.file-icon').each(function (index, value) {
+                  console.log(`div${index}: ${this.id}`);
+                  if (index > 0) {
+                    $(this).css('opacity', '1');
+                  }
+                });
               }
 
               if (fileCount == 1) {
@@ -4171,19 +4286,14 @@
       }
     </script>
 
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
-      integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
-
     <script src="./js/countUp.min.js"></script>
-    <script
+    <!-- <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    ></script> -->
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
-    <script src="./js/header3.js"></script>
+
+    <script src="./plugins/notification-manager/notification-manager.js"></script>
+    <script src="./js/tab.js?v=123233.332322532223.434224222221.2422531"></script>
   </body>
 </html>

@@ -498,7 +498,7 @@ $(document).ready(function() {
             $('.fixed-dark').addClass('bg-fixed-dark');
             $('.sticky-logo, .header-button-scroll').show();
             $('.main-logo, .header-button-default').hide();
-            $('.sticky-logo').attr('src', '../img/logo_small.png');
+            $('.sticky-logo').attr('src', '../img/logo_small.svg');
             // $('bar').addClass('red');
           }
           if ($('.right-menu.modern').length) {

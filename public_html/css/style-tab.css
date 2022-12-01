@@ -3,7 +3,7 @@
     font-display: swap !important;
     font-family: Alata;
     src: local('Alata'),
-      url(./fonts/alata/Alata.woff2) format('woff2');
+      url(../fonts/alata/Alata.woff2) format('woff2');
   }
   
   
@@ -2982,7 +2982,6 @@
     height: 560px;
     width: 570px;
     margin-top: 87px;
-    margin-left: 80px;
     z-index: 22;
   }
   .animaated-elements-two .elm-two {
@@ -15762,22 +15761,63 @@
     .bootstrap-vertical-tab {
       flex-direction: column !important;
     }
+
+    .hiddenmobile {
+      opacity: 0;
+    }
   
     .bootstrap-vertical-tab .nav {
       flex-direction: row !important;
       margin-right: 0px !important;
       background: #f4f4f5;
     }
+
+    .bootstrap-vertical-tab .nav-item {
+      width: 33.3333333333%;
+      text-align: center;
+      /* padding: 0.75rem 0px; */
+      border-right: 0.1vmin solid rgb(255, 255, 255);
+      border-left: 0.1vmin solid rgb(255, 255, 255);
+      border-image: initial;
+      border-top: none;
+      cursor: pointer;
+      color: rgb(2, 170, 176);
+      border-bottom: 0.1vmin solid rgb(255, 255, 255) 
+    }
+    
+
+    .bootstrap-vertical-tab .nav-item:nth-child(1) {
+      border-left: none;
+    }
+
+    .bootstrap-vertical-tab .nav-item:nth-child(3){
+      border-right: none;
+    }
+
+    .bootstrap-vertical-tab .nav-item:nth-child(5){
+      /* border-right: 0.4vmin solid rgb(255, 255, 255); */
+    }
+
+    .fixtab .nav-link {
+      /* border: 1px solid #cbd5e1; */
+      border-left: 0;
+      border-top: 0;
+      border: none;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+  }
   
     .modal-body.settingModal .container {
       padding-right: 0 !important;
     }
   
     .bootstrap-vertical-tab .nav-link.active {
-      border-right: 1px solid #cbd5e1 !important;
+      /* border-right: 1px solid #cbd5e1 !important; */
       border-bottom: 1px solid white !important;
       color: #1e293b;
       background-color: #fff;
+      height: 100%;
     }
   }
   
@@ -17285,6 +17325,16 @@
     width: 150px;
   }
 
-  .mobile-svg {
-    width: 600px;
-  }
+
+  /* .menu-section-container li {
+    width: 25%;
+    text-align: center;
+    padding: 0.75rem 0px;
+    border-right: 0.1vmin solid rgb(255, 255, 255);
+    border-left: 0.1vmin solid rgb(255, 255, 255);
+    border-image: initial;
+    border-top: none;
+    cursor: pointer;
+    color: rgb(2, 170, 176);
+    border-bottom: 0.1vmin solid rgb(255, 255, 255) !important;
+} */

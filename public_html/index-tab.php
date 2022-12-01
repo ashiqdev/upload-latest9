@@ -3352,7 +3352,7 @@
     </script>
 
     <script>
-      $('.tipso').tipso();
+      // $('.tipso').tipso();
 
       function setProgress(percent, index) {
         var circumference = 326.7256359733385;

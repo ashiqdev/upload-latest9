@@ -77,14 +77,7 @@
 
     <link rel="stylesheet" href="./slick-theme.css" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <!--[if (lt IE 9)
-      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script
-    ><![endif]-->
+   
 
     <link
       rel="stylesheet"
@@ -94,10 +87,10 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="./style-second.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./css/style-second.css?v=<?php echo time(); ?>" />
     
     
-    <link rel="stylesheet" href="./style-tab.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./css/style-tab.css?v=<?php echo time(); ?>" />
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.35/sweetalert2.min.js"
@@ -1540,7 +1533,7 @@
     </script>
 
     <script>
-      $('.tipso').tipso();
+      // $('.tipso').tipso();
 
       function setProgress(percent, index) {
         var circumference = 326.7256359733385;
@@ -2456,6 +2449,6 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
-    <script src="./js/main.js?v=12.325223.424221.22531"></script>
+    <script src="./js/tab.js?v=12.325223.424221.22531"></script>
   </body>
 </html>
